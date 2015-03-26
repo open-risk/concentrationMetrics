@@ -1,7 +1,7 @@
 ## Concentration Library (CL)
 
 A python library for the computation of various concentration indices.
-The basic formulas of concentration metrics are simple and well known.
+The basic formulas of concentration metrics are simple and well known but a collection of tested implementations is useful to have handy.
 
 Dependencies: scipy, sympy
 
