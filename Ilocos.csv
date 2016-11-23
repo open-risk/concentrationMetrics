@@ -1,0 +1,633 @@
+"income","sex","family.size","urbanity","province","AP.income","AP.family.size","AP.weight"
+"1",133582,"male",5.5,"urban","Ilocos Norte",153924,5,3844
+"2",312800,"male",1,"urban","Ilocos Norte",164531.5,1,3844
+"3",395434,"male",6,"urban","Ilocos Norte",195892.4,5,3844
+"4",519235,"female",10,"urban","Ilocos Norte",358701,10,3844
+"5",321952,"male",5,"urban","Ilocos Norte",55330,3,3844
+"6",663557,"male",4,"urban","Ilocos Norte",403462.5,6,3844
+"7",84412,"male",2,"urban","Ilocos Norte",116050,2,3844
+"8",724614,"male",9,"urban","Ilocos Norte",1013325.25,12,3844
+"9",69895,"male",7,"urban","Ilocos Norte",97484.66,7,3844
+"10",124910,"male",7,"urban","Ilocos Norte",154489.6,5,3844
+"11",168141,"female",2.5,"urban","Ilocos Norte",129767.75,3,3844
+"12",46968,"male",5.5,"urban","Ilocos Norte",66361.04,5,3844
+"13",103500,"male",3.5,"urban","Ilocos Norte",101449.25,2,3844
+"14",60430,"female",3,"urban","Ilocos Norte",61215,3,3844
+"15",110821,"male",6,"urban","Ilocos Norte",284240,6,3844
+"16",124456,"male",10,"urban","Ilocos Norte",192005.04,6,3844
+"17",80349,"male",4.5,"urban","Ilocos Norte",19886.9,1,3844
+"18",42298,"male",2.5,"urban","Ilocos Norte",100826,3,3844
+"19",118025,"female",4,"rural","Ilocos Norte",61646.2,4,5392
+"20",111718,"male",6,"rural","Ilocos Norte",216860.84,7,5392
+"21",74957,"male",6,"rural","Ilocos Norte",64872.3,6,5392
+"22",224714,"male",4,"rural","Ilocos Norte",286145.12,4,5392
+"23",100754,"male",3,"rural","Ilocos Norte",160974,3,5392
+"24",57334,"male",5,"rural","Ilocos Norte",49532,5,5392
+"25",49142,"male",3,"rural","Ilocos Norte",64438,3,5392
+"26",74903,"male",7,"rural","Ilocos Norte",63133.08,8,5392
+"27",149488,"male",4.5,"rural","Ilocos Norte",129714.2,4,5392
+"28",60935,"male",5,"rural","Ilocos Norte",38187.6,6,5392
+"29",145781,"male",7,"rural","Ilocos Norte",73002.8,7,5392
+"30",71789,"male",5.5,"rural","Ilocos Norte",92338.4,4,5392
+"31",80750,"male",5,"rural","Ilocos Norte",86750.02,5,5882
+"32",67792,"male",4,"rural","Ilocos Norte",115060.4,5,5882
+"33",22896,"female",1,"rural","Ilocos Norte",21656.8,1,5882
+"34",84435,"male",3,"rural","Ilocos Norte",82500,3,5882
+"35",103747,"male",7,"rural","Ilocos Norte",118184,7,5882
+"36",91449,"male",4.5,"rural","Ilocos Norte",74382,5,5882
+"37",76797,"male",2,"rural","Ilocos Norte",36018.4,2,5882
+"38",38810,"male",5,"rural","Ilocos Norte",99832.44,5,5882
+"39",188885,"male",4,"rural","Ilocos Norte",194055.34,4,5882
+"40",38162,"male",5,"rural","Ilocos Norte",36927,6,5882
+"41",48813,"male",4,"rural","Ilocos Norte",55812.6,4,5882
+"42",60409,"male",5,"rural","Ilocos Norte",73790.2,5,5392
+"43",58306,"male",4,"rural","Ilocos Norte",62858.4,4,5392
+"44",87679,"male",10,"rural","Ilocos Norte",110198,10,5392
+"45",51468,"male",5.5,"rural","Ilocos Norte",43111.2,1,5392
+"46",50898,"male",6,"rural","Ilocos Norte",69625.6,6,5392
+"47",172284,"male",5,"rural","Ilocos Norte",175923,5,5392
+"48",50597,"male",4,"rural","Ilocos Norte",56159.4,4,5392
+"49",71161,"male",6,"rural","Ilocos Norte",51964,5,5392
+"50",60414,"female",4.5,"rural","Ilocos Norte",44655.6,2,5392
+"51",37167,"male",5,"rural","Ilocos Norte",69234,5,5392
+"52",35490,"male",6,"rural","Ilocos Norte",75499.6,6,5392
+"53",42269,"male",5.5,"rural","Ilocos Norte",87032,5,5392
+"54",116266,"male",5,"rural","Ilocos Norte",132664.4,4,5392
+"55",36809,"male",6,"rural","Ilocos Norte",38456,6,5392
+"56",64872,"female",4,"rural","Ilocos Norte",43632,4,5392
+"57",34487,"male",5,"rural","Ilocos Norte",75360.14,5,5392
+"58",107866,"male",6.5,"rural","Ilocos Norte",111388.2,5,5392
+"59",68654,"male",2,"rural","Ilocos Norte",61314,2,5392
+"60",53394,"male",11,"rural","Ilocos Norte",57420,11,5392
+"61",33017,"male",4,"rural","Ilocos Norte",81488,4,5392
+"62",146867,"male",5.5,"rural","Ilocos Norte",65508.6,6,5392
+"63",135039,"male",9,"rural","Ilocos Norte",150788,10,5392
+"64",31733,"female",1.5,"rural","Ilocos Norte",21230,1,5392
+"65",208322,"male",6,"rural","Ilocos Norte",148394.4,6,5392
+"66",394650,"male",4.5,"urban","Ilocos Sur",766920,5,2122
+"67",116423,"male",4,"urban","Ilocos Sur",109383,2,2122
+"68",26990,"female",3,"urban","Ilocos Sur",10010,2,2122
+"69",85954,"female",2.5,"urban","Ilocos Sur",58600.2,5,2122
+"70",378117,"female",4,"urban","Ilocos Sur",265528.06,4,2122
+"71",74167,"female",4,"urban","Ilocos Sur",40750.22,5,2122
+"72",349685,"female",4,"urban","Ilocos Sur",259393.4,4,2122
+"73",143324,"male",2.5,"urban","Ilocos Sur",84480,1,2122
+"74",395089,"male",8.5,"urban","Ilocos Sur",491625.4,11,2122
+"75",83053,"female",2,"urban","Ilocos Sur",131120,3,2122
+"76",348268,"male",6.5,"urban","Ilocos Sur",294580.64,5,2122
+"77",31670,"male",8,"urban","Ilocos Sur",19937.4,9,1945
+"78",78279,"female",5,"urban","Ilocos Sur",68328.52,5,1945
+"79",58247,"male",5,"urban","Ilocos Sur",26268.2,5,1945
+"80",156226,"female",3.5,"urban","Ilocos Sur",134904,4,1945
+"81",52897,"female",1,"urban","Ilocos Sur",57160.4,1,1945
+"82",77116,"male",7,"urban","Ilocos Sur",86108,7,1945
+"83",71870,"male",5,"urban","Ilocos Sur",55630.8,5,1945
+"84",169347,"male",5,"urban","Ilocos Sur",166801.5,5,1945
+"85",44647,"male",1.5,"urban","Ilocos Sur",28138,2,1945
+"86",88414,"male",4,"urban","Ilocos Sur",81888.4,4,1945
+"87",242550,"male",7.5,"urban","Ilocos Sur",82456.4,4,1945
+"88",144523,"male",6,"urban","Ilocos Sur",129558.66,6,1945
+"89",76505,"male",6,"rural","Ilocos Sur",82718.44,6,4407
+"90",62136,"female",3,"rural","Ilocos Sur",63343.16,3,4407
+"91",125247,"male",5,"rural","Ilocos Sur",69021.38,4,4407
+"92",88349,"male",4,"rural","Ilocos Sur",49591,3,4407
+"93",78666,"male",4,"rural","Ilocos Sur",104098.4,5,4407
+"94",31749,"male",5,"rural","Ilocos Sur",44726,5,4407
+"95",56820,"male",7,"rural","Ilocos Sur",59783.5,5,4407
+"96",156867,"male",9,"rural","Ilocos Sur",51154.48,4,4407
+"97",68852,"male",5.5,"rural","Ilocos Sur",188385.2,4,4407
+"98",146120,"male",5,"rural","Ilocos Sur",117700,4,4407
+"99",389678,"male",8,"rural","Ilocos Sur",270651.78,5,4407
+"100",65604,"female",3,"rural","Ilocos Sur",71500,3,4040
+"101",106913,"male",5,"rural","Ilocos Sur",107224.6,5,4040
+"102",128390,"female",5,"rural","Ilocos Sur",173768,5,4040
+"103",95960,"male",7,"rural","Ilocos Sur",88888.8,7,4040
+"104",362662,"male",7,"rural","Ilocos Sur",233957.5,8,4040
+"105",37600,"male",5.5,"rural","Ilocos Sur",135960,6,4040
+"106",175966,"male",3,"rural","Ilocos Sur",190080,3,4040
+"107",683574,"male",4,"rural","Ilocos Sur",815205.37,4,4040
+"108",89285,"male",5,"rural","Ilocos Sur",91667.6,5,4040
+"109",76022,"male",4.5,"rural","Ilocos Sur",271920,4,4040
+"110",52259,"male",6,"rural","Ilocos Sur",51765,6,4040
+"111",26262,"female",3,"rural","Ilocos Sur",27876,2,4040
+"112",46371,"male",4,"rural","Ilocos Sur",31180.8,3,4848
+"113",23921,"female",2,"rural","Ilocos Sur",27297.6,2,4848
+"114",45043,"male",6,"rural","Ilocos Sur",68780.8,6,4848
+"115",19863,"female",1,"rural","Ilocos Sur",30196.25,1,4848
+"116",39762,"male",3,"rural","Ilocos Sur",51574.18,3,4848
+"117",152545,"male",8.5,"rural","Ilocos Sur",125994,8,4848
+"118",125690,"female",8.5,"rural","Ilocos Sur",132000,7,4848
+"119",61260,"male",5,"rural","Ilocos Sur",80608,5,4848
+"120",35377,"male",2.5,"rural","Ilocos Sur",92829,3,4848
+"121",55856,"male",4,"rural","Ilocos Sur",59600.8,4,4848
+"122",109846,"male",2,"rural","Ilocos Sur",117040,2,4040
+"123",41641,"male",4.5,"rural","Ilocos Sur",52272,5,4040
+"124",103402,"male",2,"rural","Ilocos Sur",118800,2,4040
+"125",41754,"female",3,"rural","Ilocos Sur",40040,7,4040
+"126",31289,"male",4,"rural","Ilocos Sur",40904.5,4,4040
+"127",66235,"male",4,"rural","Ilocos Sur",29370,3,4040
+"128",43387,"male",6,"rural","Ilocos Sur",63742,7,4040
+"129",136487,"male",5,"rural","Ilocos Sur",92659.6,5,4040
+"130",33508,"female",5,"rural","Ilocos Sur",118800,5,4040
+"131",49287,"male",3,"rural","Ilocos Sur",179080,4,4040
+"132",47136,"male",6.5,"rural","Ilocos Sur",155540,6,4040
+"133",22826,"male",5.5,"rural","Ilocos Sur",85140,6,4040
+"134",447364,"male",8,"urban","La Union",827200,6,1631
+"135",312915,"male",6,"urban","La Union",362355,6,1631
+"136",119625,"male",7,"urban","La Union",60291,7,1631
+"137",253837,"female",12,"urban","La Union",276540,6,1631
+"138",51151,"male",3,"urban","La Union",32724,3,1631
+"139",69147,"female",1,"urban","La Union",38280,7,1631
+"140",157024,"female",5,"urban","La Union",322190,6,1631
+"141",153784,"male",4,"urban","La Union",77647.5,4,1631
+"142",198699,"male",2,"urban","La Union",204157.1,2,1631
+"143",85264,"female",7,"urban","La Union",219120,7,1631
+"144",465263,"male",4,"urban","La Union",620347.7,4,1631
+"145",87412,"male",5.5,"urban","La Union",33734,5,1631
+"146",51470,"male",3.5,"urban","La Union",66220,4,1631
+"147",59495,"male",2,"urban","La Union",51156,2,1631
+"148",51520,"male",5,"urban","La Union",59073,5,1631
+"149",70378,"male",4,"urban","La Union",95467.22,4,1631
+"150",63187,"male",6.5,"urban","La Union",86680,7,1631
+"151",451365,"male",7.5,"urban","La Union",610444,9,1631
+"152",137887,"male",3,"urban","La Union",184831.5,3,1631
+"153",203240,"male",3,"urban","La Union",446016,7,1631
+"154",205097,"male",5,"urban","La Union",160735.4,5,1631
+"155",33320,"male",3,"urban","La Union",19932,3,1631
+"156",37578,"male",5,"urban","La Union",69527.5,5,1631
+"157",163665,"male",7,"urban","La Union",78174,6,1631
+"158",25050,"male",3,"urban","La Union",23496,1,1631
+"159",132080,"female",4,"urban","La Union",115873.26,4,1631
+"160",60578,"male",4,"urban","La Union",83179.25,4,1631
+"161",94522,"female",4.5,"urban","La Union",107140,5,1631
+"162",46123,"female",3.5,"urban","La Union",74910,2,1631
+"163",45497,"male",6,"urban","La Union",55352,6,1631
+"164",55884,"male",6,"urban","La Union",47752.8,7,1631
+"165",42915,"male",2,"urban","La Union",37149,2,1631
+"166",70058,"male",5,"urban","La Union",90455.6,5,1631
+"167",48906,"male",2,"urban","La Union",47380.2,1,1631
+"168",128434,"female",7,"urban","La Union",83968.92,7,1631
+"169",116147,"male",6,"urban","La Union",134621.48,6,1631
+"170",122287,"male",2.5,"urban","La Union",64785.42,2,1631
+"171",85613,"male",5,"urban","La Union",32441.2,5,1631
+"172",44810,"female",1,"urban","La Union",57246,2,1631
+"173",258058,"male",4,"urban","La Union",238339.8,7,1631
+"174",59650,"male",5,"urban","La Union",40397,5,1631
+"175",169039,"male",4,"urban","La Union",163191.76,4,1631
+"176",31909,"male",6,"urban","La Union",49643,6,1631
+"177",78197,"male",7,"urban","La Union",15768.12,7,1631
+"178",55425,"male",4,"urban","La Union",27770.4,4,1631
+"179",45082,"male",3.5,"rural","La Union",69609.2,4,4194
+"180",42202,"male",4,"rural","La Union",91679.72,3,4194
+"181",32896,"male",4,"rural","La Union",42250.32,4,4194
+"182",36877,"male",3,"rural","La Union",42020,4,4194
+"183",22534,"male",4,"rural","La Union",30254.4,3,4194
+"184",42070,"male",5,"rural","La Union",85162,5,4194
+"185",38000,"male",7.5,"rural","La Union",39195.2,7,4194
+"186",80142,"male",3,"rural","La Union",83163.4,1,4194
+"187",41896,"male",4.5,"rural","La Union",66088,4,4194
+"188",28082,"male",4.5,"rural","La Union",45139.6,5,4194
+"189",63570,"male",5,"rural","La Union",123860,5,4194
+"190",30163,"male",3,"rural","La Union",41646,4,4194
+"191",193764,"male",6,"rural","La Union",148774.64,7,4194
+"192",55953,"male",4.5,"rural","La Union",29480,4,4194
+"193",392699,"male",4,"rural","La Union",359977.2,4,4194
+"194",134432,"male",9.5,"rural","La Union",55836,10,4194
+"195",81309,"male",3,"rural","La Union",119770,3,4194
+"196",73285,"male",3.5,"rural","La Union",45870,4,4194
+"197",276079,"male",5.5,"rural","La Union",260469.3,5,4194
+"198",206004,"male",7.5,"rural","La Union",45958,8,4194
+"199",19451,"male",4,"rural","La Union",44374,4,4194
+"200",31341,"male",3,"rural","La Union",58751,3,4194
+"201",44040,"male",5,"rural","La Union",39534,4,4194
+"202",86104,"female",2,"rural","La Union",58788.8,3,4194
+"203",59180,"male",6,"rural","La Union",49544,6,4194
+"204",41971,"male",2,"rural","La Union",26098.4,2,4194
+"205",32631,"male",2,"rural","La Union",39028,2,4194
+"206",31599,"female",4,"rural","La Union",26752,4,4194
+"207",31573,"male",4,"rural","La Union",31416,4,4194
+"208",39567,"male",7,"rural","La Union",31262,7,4194
+"209",20217,"male",2,"rural","La Union",22484,1,4194
+"210",63276,"male",5,"rural","La Union",47498,4,4194
+"211",26713,"female",5,"rural","La Union",43340,6,4194
+"212",17525,"male",3,"rural","La Union",34166,3,4194
+"213",55814,"male",7,"rural","La Union",52096,6,4194
+"214",30876,"female",8,"rural","La Union",28600,7,4194
+"215",39628,"male",4,"rural","La Union",29818.8,4,4194
+"216",33368,"male",7,"rural","La Union",36740,8,4194
+"217",276881,"male",6,"rural","La Union",367919.2,6,4194
+"218",76372,"male",4,"rural","La Union",134090,5,4194
+"219",13999,"male",2,"rural","La Union",15224,2,4194
+"220",33260,"female",1,"rural","La Union",51982.68,1,4194
+"221",43785,"female",4,"rural","La Union",74113.6,5,4194
+"222",43656,"male",4,"rural","La Union",48639.8,4,4194
+"223",49738,"male",2,"rural","La Union",19800,2,4194
+"224",41393,"male",2,"rural","La Union",14960,2,4194
+"225",29738,"male",3,"rural","La Union",42240,5,4194
+"226",61664,"male",7,"rural","La Union",37989.6,7,4194
+"227",386678,"male",7,"rural","La Union",489294.96,7,4194
+"228",328215,"male",4,"rural","La Union",282322.25,4,4194
+"229",82406,"male",2,"rural","La Union",55677.6,1,4194
+"230",65514,"male",5,"rural","La Union",54160.4,6,4194
+"231",255400,"male",3,"rural","La Union",85446,4,4194
+"232",116258,"male",5,"rural","La Union",93465.4,5,4194
+"233",24512,"female",2,"rural","La Union",29512.2,2,4194
+"234",76741,"male",5,"rural","La Union",79163.8,5,4194
+"235",212846,"male",4,"rural","La Union",198249.8,4,4194
+"236",164093,"male",3.5,"rural","La Union",363135.4,3,4194
+"237",117206,"male",4,"rural","La Union",87322.4,3,4194
+"238",32562,"male",4.5,"rural","La Union",58973.2,6,4194
+"239",101932,"female",9,"rural","La Union",268140.4,11,4194
+"240",230685,"male",6,"rural","La Union",218793.4,6,4194
+"241",44304,"female",3,"rural","La Union",62686.4,4,4194
+"242",157930,"male",4.5,"rural","La Union",261800,3,4194
+"243",66588,"male",5.5,"rural","La Union",56111,6,4194
+"244",38416,"male",8,"rural","La Union",39116,8,4194
+"245",58230,"male",4,"rural","La Union",65582,4,4194
+"246",297090,"male",12,"rural","La Union",6820,8,4194
+"247",36669,"male",5.5,"rural","La Union",57134,6,4194
+"248",48156,"male",3,"rural","La Union",75163,3,4194
+"249",240042,"male",5,"rural","La Union",178279.2,5,4194
+"250",78252,"male",5,"urban","Pangasinan",73853.43,6,3207
+"251",169533,"female",3,"urban","Pangasinan",330000,3,3207
+"252",120286,"female",1.5,"urban","Pangasinan",132000,1,3207
+"253",91300,"male",5.5,"urban","Pangasinan",47017.52,6,3207
+"254",53088,"female",2,"urban","Pangasinan",35371.6,2,3207
+"255",75829,"female",8,"urban","Pangasinan",77871.2,8,3207
+"256",72556,"female",5,"urban","Pangasinan",79464,5,3207
+"257",120516,"female",7,"urban","Pangasinan",95328.8,5,3207
+"258",212132,"male",4,"urban","Pangasinan",175740,4,3207
+"259",29644,"male",3,"urban","Pangasinan",27465.9,3,3207
+"260",49844,"male",7,"urban","Pangasinan",48557.6,7,3207
+"261",65053,"male",7,"urban","Pangasinan",41690,6,3207
+"262",47535,"male",5,"urban","Pangasinan",94972.32,5,3207
+"263",104390,"male",7,"urban","Pangasinan",82294.8,8,3207
+"264",107993,"male",7,"urban","Pangasinan",62106,6,3207
+"265",50531,"male",7,"urban","Pangasinan",47397.28,7,3207
+"266",40177,"male",5,"urban","Pangasinan",22638,6,3207
+"267",60313,"male",5,"urban","Pangasinan",99880,5,3207
+"268",45687,"male",6.5,"urban","Pangasinan",42904.8,8,3207
+"269",244880,"female",6,"urban","Pangasinan",383670,6,3207
+"270",138409,"female",3.5,"urban","Pangasinan",211200,3,3207
+"271",76247,"male",6,"urban","Pangasinan",67375,6,3207
+"272",101411,"male",3,"urban","Pangasinan",124014.73,3,2940
+"273",57626,"male",4,"urban","Pangasinan",47066,5,2940
+"274",96889,"male",7,"urban","Pangasinan",120216.6,8,2940
+"275",37971,"male",5,"urban","Pangasinan",39975.8,5,2940
+"276",36028,"male",2,"urban","Pangasinan",27023.56,3,2940
+"277",57391,"male",3,"urban","Pangasinan",47718,3,2940
+"278",87571,"male",11.5,"urban","Pangasinan",38082.8,11,2940
+"279",30191,"male",3,"urban","Pangasinan",13125.2,4,2940
+"280",67362,"male",9,"urban","Pangasinan",38513.32,8,2940
+"281",68930,"female",6,"urban","Pangasinan",70174.8,7,2940
+"282",28618,"male",8,"urban","Pangasinan",54626,8,2940
+"283",109836,"male",6,"urban","Pangasinan",67872,6,2940
+"284",189281,"male",10,"urban","Pangasinan",1073677.15,10,2940
+"285",58759,"male",7,"urban","Pangasinan",68222,9,2940
+"286",56540,"female",5,"urban","Pangasinan",56324.4,5,2940
+"287",178426,"male",3,"urban","Pangasinan",179740,9,2940
+"288",140748,"male",9,"urban","Pangasinan",123321,10,2940
+"289",110300,"male",5,"urban","Pangasinan",77254.9,5,2940
+"290",112460,"male",3.5,"urban","Pangasinan",64046.5,4,2940
+"291",125181,"male",5,"urban","Pangasinan",48492.64,6,2940
+"292",137196,"male",7,"urban","Pangasinan",97566,4,2940
+"293",108858,"male",4,"urban","Pangasinan",148469.2,4,2940
+"294",89814,"male",10,"urban","Pangasinan",64034,10,2940
+"295",130220,"female",2.5,"urban","Pangasinan",31059,4,2940
+"296",138547,"female",4.5,"urban","Pangasinan",174240,4,2940
+"297",244354,"male",4,"urban","Pangasinan",258211.94,6,2940
+"298",196067,"male",4,"urban","Pangasinan",125240,4,2940
+"299",82399,"male",5,"urban","Pangasinan",96217.94,4,2940
+"300",43366,"male",5.5,"urban","Pangasinan",103015.96,8,2940
+"301",104523,"male",6,"urban","Pangasinan",42420,7,2940
+"302",113912,"male",5,"urban","Pangasinan",93720,5,2940
+"303",195607,"male",2.5,"urban","Pangasinan",1092140,8,2940
+"304",137025,"female",8,"urban","Pangasinan",90500.04,8,2940
+"305",216190,"male",7,"urban","Pangasinan",127260,7,2940
+"306",123109,"male",6,"urban","Pangasinan",147743.4,6,3207
+"307",300071,"male",6,"urban","Pangasinan",1666500,7,3207
+"308",63231,"male",4,"urban","Pangasinan",66599.4,4,3207
+"309",226425,"female",4,"urban","Pangasinan",165000,4,3207
+"310",145700,"male",6,"urban","Pangasinan",147479.5,6,3207
+"311",294880,"male",3,"urban","Pangasinan",357038.43,3,3207
+"312",226866,"male",5,"urban","Pangasinan",267145,4,3207
+"313",64665,"male",5,"urban","Pangasinan",37046.8,5,3207
+"314",257290,"male",4.5,"urban","Pangasinan",472437.6,5,3207
+"315",171281,"male",9,"urban","Pangasinan",179076.45,9,3207
+"316",369106,"female",4,"urban","Pangasinan",193702.6,4,3207
+"317",54742,"male",5,"urban","Pangasinan",71610,5,2940
+"318",172510,"female",12.5,"urban","Pangasinan",156772,12,2940
+"319",47068,"male",4,"urban","Pangasinan",60128.6,4,2940
+"320",39442,"female",3.5,"urban","Pangasinan",75240,5,2940
+"321",114419,"male",3,"urban","Pangasinan",54340,3,2940
+"322",70133,"male",5,"urban","Pangasinan",59885,5,2940
+"323",22374,"female",2,"urban","Pangasinan",26774,2,2940
+"324",196977,"male",10,"urban","Pangasinan",92920,11,2940
+"325",303714,"female",2,"urban","Pangasinan",385643.16,2,2940
+"326",36221,"male",2,"urban","Pangasinan",18227,2,2940
+"327",50368,"male",6,"urban","Pangasinan",46965,5,2940
+"328",46343,"male",3.5,"urban","Pangasinan",39410.2,3,2940
+"329",114766,"female",2,"urban","Pangasinan",182700,2,2940
+"330",77918,"male",5,"urban","Pangasinan",90640,5,2940
+"331",78461,"male",7,"urban","Pangasinan",164734.5,7,2940
+"332",202086,"male",3,"urban","Pangasinan",112110,3,2940
+"333",116418,"male",4.5,"urban","Pangasinan",103936,5,2940
+"334",312056,"male",6,"urban","Pangasinan",190617,6,2940
+"335",66106,"male",4,"urban","Pangasinan",181093,5,2940
+"336",241190,"male",4,"urban","Pangasinan",239492,5,2940
+"337",53771,"male",6,"urban","Pangasinan",106493.8,6,2940
+"338",84529,"male",5,"urban","Pangasinan",75313,5,2940
+"339",32221,"female",4,"urban","Pangasinan",29008.7,4,2940
+"340",95442,"male",8,"urban","Pangasinan",147885.5,8,2940
+"341",71712,"male",9,"urban","Pangasinan",78174,10,3207
+"342",45850,"male",6,"urban","Pangasinan",31757,6,3207
+"343",49815,"male",3,"urban","Pangasinan",35451,4,3207
+"344",33755,"male",2,"urban","Pangasinan",39380,2,3207
+"345",58403,"male",8.5,"urban","Pangasinan",54252,11,3207
+"346",212968,"female",6,"urban","Pangasinan",107470,6,3207
+"347",62677,"male",2.5,"urban","Pangasinan",36410,2,3207
+"348",57244,"male",5,"urban","Pangasinan",56257,5,3207
+"349",50169,"male",10,"urban","Pangasinan",62436,10,3207
+"350",60382,"male",9,"urban","Pangasinan",32780,9,3207
+"351",46451,"male",9.5,"urban","Pangasinan",50399,10,3207
+"352",163754,"male",6.5,"urban","Pangasinan",254359,7,2940
+"353",111061,"female",10.5,"urban","Pangasinan",137025,9,2940
+"354",56582,"male",6,"urban","Pangasinan",55954,6,2940
+"355",167486,"male",6,"urban","Pangasinan",171160,6,2940
+"356",179184,"female",4,"urban","Pangasinan",275440,3,2940
+"357",48987,"male",5,"urban","Pangasinan",90578.6,5,2940
+"358",39271,"female",3.5,"urban","Pangasinan",56595,5,2940
+"359",69231,"female",5.5,"urban","Pangasinan",41208,5,2940
+"360",47379,"female",3,"urban","Pangasinan",39248.6,3,2940
+"361",71572,"female",4.5,"urban","Pangasinan",146793.4,5,2940
+"362",36362,"male",7.5,"urban","Pangasinan",48015,8,2940
+"363",121156,"male",10,"urban","Pangasinan",123215.96,9,2940
+"364",61321,"male",6,"urban","Pangasinan",104565.3,6,2940
+"365",91600,"male",9,"urban","Pangasinan",65230,9,2940
+"366",73835,"male",7,"urban","Pangasinan",57004.4,7,2940
+"367",19781,"male",2,"urban","Pangasinan",61160,2,2940
+"368",129060,"female",3,"urban","Pangasinan",89760,3,2940
+"369",116067,"female",7.5,"urban","Pangasinan",114950,8,2940
+"370",121780,"female",8,"urban","Pangasinan",89890,8,2940
+"371",172110,"male",8,"urban","Pangasinan",244319,8,2940
+"372",197290,"male",10,"urban","Pangasinan",190630,10,2940
+"373",57462,"male",4,"urban","Pangasinan",64460,4,2940
+"374",55295,"male",8,"urban","Pangasinan",87450,8,2940
+"375",150028,"male",5,"urban","Pangasinan",115948,5,2940
+"376",134431,"male",2,"urban","Pangasinan",84131.32,2,2940
+"377",111501,"male",9,"urban","Pangasinan",206444,9,2940
+"378",167073,"male",7,"urban","Pangasinan",142612,7,2940
+"379",121883,"male",8,"urban","Pangasinan",136273.9,7,2940
+"380",190837,"female",4,"urban","Pangasinan",169911,4,2940
+"381",131992,"male",9,"urban","Pangasinan",129206,10,2940
+"382",162960,"male",6,"urban","Pangasinan",165648,6,2940
+"383",200274,"male",6,"urban","Pangasinan",207974.8,5,2940
+"384",121884,"male",6,"urban","Pangasinan",190267.84,6,2940
+"385",198450,"male",7,"urban","Pangasinan",220975.88,7,2940
+"386",125175,"male",4,"urban","Pangasinan",89210,4,2940
+"387",55812,"male",2,"urban","Pangasinan",61116,3,2940
+"388",51053,"male",6.5,"urban","Pangasinan",63044.2,7,2940
+"389",40620,"male",4.5,"urban","Pangasinan",28562.8,4,2940
+"390",399506,"male",6,"urban","Pangasinan",419364,6,2940
+"391",235600,"male",7,"urban","Pangasinan",157629.5,7,2940
+"392",43110,"female",2,"urban","Pangasinan",55013,2,2940
+"393",51467,"male",4,"urban","Pangasinan",35309.6,4,2940
+"394",215102,"male",13,"urban","Pangasinan",144170.6,11,2940
+"395",36696,"male",9,"urban","Pangasinan",41800,9,2940
+"396",60892,"male",5,"urban","Pangasinan",0,4,2940
+"397",142738,"male",4.5,"urban","Pangasinan",119967.8,4,2940
+"398",70653,"male",8,"urban","Pangasinan",42076.6,8,2940
+"399",361900,"male",6,"urban","Pangasinan",115170,5,2940
+"400",74850,"male",7,"urban","Pangasinan",52318,7,2940
+"401",582000,"female",11,"urban","Pangasinan",425995.5,11,2940
+"402",389000,"male",4,"urban","Pangasinan",276982.4,4,2940
+"403",25638,"male",1,"urban","Pangasinan",14645,1,2940
+"404",46200,"female",3,"urban","Pangasinan",102272.6,13,2940
+"405",87940,"male",9,"urban","Pangasinan",42218,9,2940
+"406",64860,"female",5,"urban","Pangasinan",46561,2,2940
+"407",639416,"male",6,"urban","Pangasinan",7878,6,2940
+"408",56690,"male",9,"urban","Pangasinan",36966,9,2940
+"409",835742,"male",5,"urban","Pangasinan",105545,5,2940
+"410",38776,"male",3.5,"urban","Pangasinan",40359,4,2940
+"411",46818,"male",3,"urban","Pangasinan",32890,3,2940
+"412",41275,"male",6,"urban","Pangasinan",44858,6,2940
+"413",100640,"male",4,"urban","Pangasinan",85544.2,4,2940
+"414",144846,"male",4,"urban","Pangasinan",138344.5,4,2940
+"415",42925,"male",6.5,"urban","Pangasinan",80814.8,7,2940
+"416",118060,"male",4,"urban","Pangasinan",84274.4,4,2940
+"417",148820,"female",3,"urban","Pangasinan",110958.6,3,2940
+"418",308807,"male",6,"urban","Pangasinan",106304,3,2940
+"419",169732,"female",8,"urban","Pangasinan",277200,9,2940
+"420",72730,"male",9,"urban","Pangasinan",83556,10,2940
+"421",72377,"male",9,"urban","Pangasinan",123244,10,2940
+"422",108686,"male",5,"urban","Pangasinan",64135,6,5879
+"423",127125,"male",10,"urban","Pangasinan",110898.9,10,5879
+"424",42576,"male",5,"urban","Pangasinan",42622,5,5879
+"425",78018,"male",8.5,"urban","Pangasinan",73080,8,5879
+"426",50485,"male",5.5,"urban","Pangasinan",55398.7,7,5879
+"427",151200,"male",6.5,"urban","Pangasinan",47874,2,5879
+"428",133040,"male",7.5,"urban","Pangasinan",40040,7,3207
+"429",89554,"male",6,"urban","Pangasinan",86658,6,3207
+"430",69276,"female",3,"urban","Pangasinan",72754,3,3207
+"431",77691,"male",5,"urban","Pangasinan",53262,5,3207
+"432",76870,"male",3,"urban","Pangasinan",132525.8,3,3207
+"433",126471,"male",6,"urban","Pangasinan",35931,6,3207
+"434",59624,"male",4.5,"urban","Pangasinan",65163,4,3207
+"435",86347,"male",5.5,"urban","Pangasinan",121550,6,3207
+"436",140272,"male",5,"urban","Pangasinan",103022.5,5,3207
+"437",40240,"male",3,"urban","Pangasinan",51914,2,3207
+"438",24561,"male",6,"urban","Pangasinan",22440,6,3207
+"439",83892,"male",5,"urban","Pangasinan",57772,5,3207
+"440",132245,"male",5.5,"urban","Pangasinan",53328,6,3207
+"441",113629,"male",8,"urban","Pangasinan",176813,9,3207
+"442",59738,"female",2,"urban","Pangasinan",46789.6,2,3207
+"443",176020,"male",5.5,"urban","Pangasinan",173643.8,7,3207
+"444",85416,"female",9,"urban","Pangasinan",136422,9,3207
+"445",148130,"female",3.5,"urban","Pangasinan",73124,3,3207
+"446",324101,"male",3,"urban","Pangasinan",271005,3,3207
+"447",60382,"male",7,"urban","Pangasinan",103854.8,7,3207
+"448",172770,"male",8,"urban","Pangasinan",69488,8,3207
+"449",329505,"male",4,"urban","Pangasinan",880181.61,3,3207
+"450",266825,"female",1,"urban","Pangasinan",200990,1,3207
+"451",121574,"male",5.5,"urban","Pangasinan",249304,3,3207
+"452",60277,"male",7,"urban","Pangasinan",36535.4,7,3207
+"453",36032,"male",3,"urban","Pangasinan",84744,2,3207
+"454",77729,"male",4,"urban","Pangasinan",34946,4,3207
+"455",167892,"male",2.5,"urban","Pangasinan",25190,2,3207
+"456",116431,"female",5.5,"urban","Pangasinan",9020,5,3207
+"457",74748,"male",3.5,"urban","Pangasinan",74910,3,3207
+"458",36426,"male",1,"urban","Pangasinan",15708,1,3207
+"459",158347,"male",4,"urban","Pangasinan",199980,7,3207
+"460",262608,"male",4,"urban","Pangasinan",488169.36,4,3207
+"461",205263,"female",5,"urban","Pangasinan",194896.24,8,3207
+"462",135445,"male",6,"urban","Pangasinan",100386,7,3207
+"463",150798,"female",7.5,"urban","Pangasinan",87021.6,4,3207
+"464",282864,"male",6.5,"urban","Pangasinan",154123.2,6,3207
+"465",118588,"male",3,"urban","Pangasinan",96596.4,3,3207
+"466",51650,"male",4,"urban","Pangasinan",39219.6,4,3207
+"467",719016,"male",6.5,"urban","Pangasinan",105605.6,7,3207
+"468",79634,"male",5.5,"urban","Pangasinan",36300,5,3207
+"469",147926,"male",5,"urban","Pangasinan",44076.4,6,3207
+"470",116355,"female",5,"urban","Pangasinan",74635,5,3207
+"471",41667,"male",8,"urban","Pangasinan",36499.4,8,2940
+"472",109297,"male",6,"urban","Pangasinan",22231,5,2940
+"473",54197,"male",6,"urban","Pangasinan",39006,6,2940
+"474",357795,"female",8,"urban","Pangasinan",103840,5,2940
+"475",124346,"male",6.5,"urban","Pangasinan",84759.2,8,2940
+"476",175276,"female",6,"urban","Pangasinan",174174,5,2940
+"477",166367,"male",7,"urban","Pangasinan",129917.97,6,2940
+"478",145224,"male",8,"urban","Pangasinan",86724,6,2940
+"479",49081,"male",6,"urban","Pangasinan",30926.2,7,2940
+"480",101768,"male",4,"urban","Pangasinan",81463.9,4,2940
+"481",140748,"male",3,"urban","Pangasinan",24299,2,2940
+"482",93074,"male",5.5,"urban","Pangasinan",60064.7,5,2940
+"483",63984,"male",3,"urban","Pangasinan",34104,3,2940
+"484",71335,"male",3,"urban","Pangasinan",58176,3,2940
+"485",30049,"male",12,"urban","Pangasinan",66352,13,2940
+"486",120341,"male",8.5,"urban","Pangasinan",173580,9,2940
+"487",187684,"female",3,"urban","Pangasinan",194149.2,2,2940
+"488",233426,"female",7,"urban","Pangasinan",1324620,7,2940
+"489",45435,"male",3,"urban","Pangasinan",39091.04,3,2940
+"490",274964,"male",3,"urban","Pangasinan",172920,3,2940
+"491",136233,"male",4,"urban","Pangasinan",2290094.2,2,2940
+"492",34115,"male",3,"urban","Pangasinan",52927.6,3,2940
+"493",180047,"female",5.5,"urban","Pangasinan",129976,4,2940
+"494",267634,"male",5,"urban","Pangasinan",297363,7,2940
+"495",23776,"female",2,"rural","Pangasinan",16390,2,7757
+"496",137668,"female",4,"rural","Pangasinan",72545,4,7757
+"497",47382,"male",4,"rural","Pangasinan",31128.2,4,7757
+"498",90946,"female",4.5,"rural","Pangasinan",44550,5,7757
+"499",149879,"male",7.5,"rural","Pangasinan",100848,7,7757
+"500",57313,"male",4,"rural","Pangasinan",27394.4,5,7757
+"501",36643,"male",7,"rural","Pangasinan",39218.3,7,7757
+"502",123276,"male",9,"rural","Pangasinan",125492.5,10,7757
+"503",70469,"female",5,"rural","Pangasinan",53548,5,7757
+"504",51754,"male",3,"rural","Pangasinan",35107.6,3,7757
+"505",34866,"male",5.5,"rural","Pangasinan",27940,5,7757
+"506",126840,"male",6,"rural","Pangasinan",131515.58,6,7757
+"507",115462,"male",3.5,"rural","Pangasinan",96866,3,7757
+"508",50628,"male",5,"rural","Pangasinan",30118,6,7757
+"509",96744,"male",6,"rural","Pangasinan",108097.5,6,7757
+"510",31354,"male",7,"rural","Pangasinan",11748,7,7757
+"511",30979,"male",5,"rural","Pangasinan",22110,5,7757
+"512",32586,"male",3,"rural","Pangasinan",24640,3,7757
+"513",64356,"male",6,"rural","Pangasinan",62321,6,7757
+"514",20775,"male",5,"rural","Pangasinan",18106,5,7757
+"515",27419,"male",3,"rural","Pangasinan",8558,3,7757
+"516",77963,"male",7,"rural","Pangasinan",60478,7,7757
+"517",61724,"male",5,"rural","Pangasinan",52980.4,5,7757
+"518",31053,"male",7,"rural","Pangasinan",33880,7,7757
+"519",32640,"male",3,"rural","Pangasinan",84700,3,7757
+"520",149227,"male",6,"rural","Pangasinan",67670,3,7757
+"521",39012,"male",6.5,"rural","Pangasinan",55660,7,7757
+"522",48595,"male",4,"rural","Pangasinan",26400,4,7757
+"523",61175,"male",7.5,"rural","Pangasinan",71060,8,7757
+"524",66212,"male",7.5,"rural","Pangasinan",51150,7,7757
+"525",255910,"male",5,"rural","Pangasinan",287651,5,7757
+"526",37950,"male",4,"rural","Pangasinan",93060,6,7757
+"527",84530,"male",7,"rural","Pangasinan",65326.8,7,7757
+"528",375800,"male",4,"rural","Pangasinan",619150,5,7757
+"529",78120,"male",2,"rural","Pangasinan",160380,2,7757
+"530",37702,"male",3,"rural","Pangasinan",72518,4,7757
+"531",20908,"female",5,"rural","Pangasinan",30580,5,7757
+"532",151140,"male",9,"rural","Pangasinan",228563,9,7757
+"533",54750,"male",10,"rural","Pangasinan",66660,10,7757
+"534",45230,"male",10,"rural","Pangasinan",51040,10,7757
+"535",38982,"male",1,"rural","Pangasinan",22220,1,7757
+"536",42138,"male",8,"rural","Pangasinan",85800,8,7757
+"537",27795,"male",3,"rural","Pangasinan",29260,2,7757
+"538",72995,"female",9,"rural","Pangasinan",67650,9,7757
+"539",78134,"male",8,"rural","Pangasinan",81707.5,5,7757
+"540",65053,"male",8,"rural","Pangasinan",114180,11,7757
+"541",27128,"male",6,"rural","Pangasinan",50380,6,7757
+"542",128940,"male",8.5,"rural","Pangasinan",96354,7,7757
+"543",47337,"male",4.5,"rural","Pangasinan",56540,7,7757
+"544",37697,"male",3.5,"rural","Pangasinan",25190,4,7757
+"545",69162,"male",3.5,"rural","Pangasinan",35530,3,7757
+"546",59140,"male",7,"rural","Pangasinan",30470,7,7757
+"547",148033,"male",6,"rural","Pangasinan",116319,6,7757
+"548",37322,"male",2,"rural","Pangasinan",27940,2,7757
+"549",23375,"male",7,"rural","Pangasinan",27060,7,7757
+"550",38199,"male",6,"rural","Pangasinan",39160,6,7757
+"551",23445,"male",2,"rural","Pangasinan",24728,2,7757
+"552",30151,"female",5,"rural","Pangasinan",29040,5,7757
+"553",6067,"male",1,"rural","Pangasinan",9130,1,7757
+"554",264496,"female",4,"rural","Pangasinan",246400,4,8462
+"555",82775,"male",5,"rural","Pangasinan",69527.5,5,8462
+"556",66642,"male",5,"rural","Pangasinan",110696,5,8462
+"557",98713,"male",10.5,"rural","Pangasinan",239471,10,8462
+"558",66344,"male",6,"rural","Pangasinan",76739.8,6,8462
+"559",136834,"male",3,"rural","Pangasinan",100383.5,3,8462
+"560",54694,"male",9,"rural","Pangasinan",70620,9,8462
+"561",79089,"male",7.5,"rural","Pangasinan",167024,8,8462
+"562",47310,"male",3.5,"rural","Pangasinan",17996,1,8462
+"563",99777,"male",6.5,"rural","Pangasinan",83027,7,8462
+"564",109651,"male",4,"rural","Pangasinan",155904,4,8462
+"565",648558,"male",8,"rural","Pangasinan",385000,7,7757
+"566",110600,"male",5,"rural","Pangasinan",45760,6,7757
+"567",35980,"male",8,"rural","Pangasinan",61610.5,8,7757
+"568",92420,"male",8,"rural","Pangasinan",70730,7,7757
+"569",22710,"female",1,"rural","Pangasinan",12281.5,1,7757
+"570",138887,"male",5,"rural","Pangasinan",83678.5,5,7757
+"571",137403,"female",4,"rural","Pangasinan",103444,4,7757
+"572",141090,"male",4.5,"rural","Pangasinan",159964,5,7757
+"573",64126,"male",5,"rural","Pangasinan",53247.2,5,7757
+"574",64500,"male",3,"rural","Pangasinan",39710,3,7757
+"575",85820,"female",4,"rural","Pangasinan",82500,3,7757
+"576",278927,"male",8,"rural","Pangasinan",295060.5,8,7757
+"577",66880,"male",7,"rural","Pangasinan",49940,7,7757
+"578",81226,"male",7,"rural","Pangasinan",54615,7,7757
+"579",149140,"male",4,"rural","Pangasinan",166054,4,7757
+"580",54400,"male",11,"rural","Pangasinan",66741.4,11,7757
+"581",25445,"male",2,"rural","Pangasinan",25135,2,7757
+"582",46228,"male",7,"rural","Pangasinan",54340,7,7757
+"583",48352,"male",5,"rural","Pangasinan",21917,5,7757
+"584",196172,"male",12,"rural","Pangasinan",88792,12,7757
+"585",35629,"female",3,"rural","Pangasinan",38170,3,7757
+"586",90222,"male",11,"rural","Pangasinan",86132.8,11,7757
+"587",52305,"male",5,"rural","Pangasinan",55220,5,7757
+"588",40038,"male",5,"rural","Pangasinan",23836,5,7757
+"589",124720,"female",6,"rural","Pangasinan",149050,6,8462
+"590",51742,"male",2,"rural","Pangasinan",117546,2,8462
+"591",192734,"male",10,"rural","Pangasinan",197549,10,8462
+"592",212345,"male",5,"rural","Pangasinan",130666.8,5,8462
+"593",225400,"male",5,"rural","Pangasinan",166386,5,8462
+"594",101920,"male",6,"rural","Pangasinan",131648,6,8462
+"595",65400,"female",3,"rural","Pangasinan",60390,3,8462
+"596",73230,"male",10,"rural","Pangasinan",68837.3,10,8462
+"597",279563,"male",5,"rural","Pangasinan",332442,5,8462
+"598",84237,"male",6,"rural","Pangasinan",48659.1,6,8462
+"599",45520,"male",1,"rural","Pangasinan",29832,1,8462
+"600",70553,"male",5,"rural","Pangasinan",40832,6,8462
+"601",159242,"male",2,"rural","Pangasinan",88102,2,8462
+"602",131663,"male",5,"rural","Pangasinan",87590.44,5,8462
+"603",56863,"male",3,"rural","Pangasinan",8800,1,8462
+"604",51617,"female",6,"rural","Pangasinan",39996,6,8462
+"605",89235,"male",8,"rural","Pangasinan",23430,8,8462
+"606",142969,"male",7,"rural","Pangasinan",133421,5,8462
+"607",54283,"male",2.5,"rural","Pangasinan",13860,2,8462
+"608",70504,"male",3,"rural","Pangasinan",4840,3,8462
+"609",133905,"male",5.5,"rural","Pangasinan",134200,5,8462
+"610",101679,"male",5.5,"rural","Pangasinan",103620,4,8462
+"611",58312,"male",6,"rural","Pangasinan",50916.8,8,7757
+"612",33570,"male",4,"rural","Pangasinan",22475.2,4,7757
+"613",78238,"male",6,"rural","Pangasinan",83903.96,6,7757
+"614",50466,"female",3,"rural","Pangasinan",31714,3,7757
+"615",67383,"female",4,"rural","Pangasinan",146234,6,7757
+"616",39866,"male",3,"rural","Pangasinan",23482.8,3,7757
+"617",24670,"male",3,"rural","Pangasinan",22048.4,3,7757
+"618",29089,"female",3.5,"rural","Pangasinan",45720.4,3,7757
+"619",38889,"male",5,"rural","Pangasinan",27302,5,7757
+"620",67828,"male",4,"rural","Pangasinan",110820.6,4,7757
+"621",39920,"male",1,"rural","Pangasinan",23408,1,7757
+"622",122504,"male",6,"rural","Pangasinan",83375.6,6,7757
+"623",61653,"male",7,"rural","Pangasinan",82126,7,7757
+"624",63844,"male",4,"rural","Pangasinan",79781.92,5,7757
+"625",49422,"male",8,"rural","Pangasinan",34672,8,7757
+"626",39785,"male",6,"rural","Pangasinan",48969.8,6,7757
+"627",36362,"male",4,"rural","Pangasinan",32249.8,4,7757
+"628",65484,"male",6,"rural","Pangasinan",194568,5,7757
+"629",52634,"male",7,"rural","Pangasinan",93016,7,7757
+"630",51458,"male",9,"rural","Pangasinan",110330,9,7757
+"631",64313,"male",5,"rural","Pangasinan",60302,5,7757
+"632",61487,"male",4,"rural","Pangasinan",75790,4,7757
