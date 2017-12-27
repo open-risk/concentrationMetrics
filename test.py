@@ -1,7 +1,21 @@
+# encoding: utf-8
+
+# (c) 2017 Open Risk, all rights reserved
+#
+# Concentration Library is licensed under the MIT license a copy of which is included
+# in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
+# third-party software included in this distribution. You may not use this file except in
+# compliance with the License.
+#
+# Unless required by applicable law or agreed to in writing, software distributed under
+# the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+# either express or implied. See the License for the specific language governing permissions and
+# limitations under the License.
+
 # -*- coding: utf-8 -*-
 """
 Created on Fri Feb 29 14:33:17 2015
-@author: openrisk
+@author: Open Risk
 Purpose: Testing concentration metrics library
 """
 
@@ -53,6 +67,7 @@ class TestConcentrationLib(unittest.TestCase):
         vector = np.ones(n)
         self.assertTrue(abs(cl.hk(vector, 1) - 1.0 / n) < ERROR_MARGIN)
         self.assertTrue(abs(cl.hk(vector, 3) - 1.0 / n) < ERROR_MARGIN)
+
 
 if __name__ == "__main__":
 

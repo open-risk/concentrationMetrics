@@ -1,13 +1,36 @@
+# encoding: utf-8
+
+# (c) 2017 Open Risk, all rights reserved
+#
+# Concentration Library is licensed under the MIT license a copy of which is included
+# in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
+# third-party software included in this distribution. You may not use this file except in
+# compliance with the License.
+#
+# Unless required by applicable law or agreed to in writing, software distributed under
+# the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+# either express or implied. See the License for the specific language governing permissions and
+# limitations under the License.
+
 """
 Created on Fri Nov 18 14:24:07 CET 2016
-@author: openrisk
+@author: Open Risk
 Purpose: Concentration metrics library
 The library implements the computation of indexes of inequality and concentration. For
 each index, it provides decomposition between subgroups. Plotting of Lorenz and concentration
 curves are also available
-Version: 0.2
+Version: 0.3
 """
+
 import numpy as np
+
+
+# TODO Enhance API: calculate weights by default
+
+
+# ADJUST THIS TO REFLECT YOUR OWN ENVIRONMENT!
+# Set the full path including trailing slash
+source_path = '/path_to_concentration_library/'
 
 
 # calculate total size
