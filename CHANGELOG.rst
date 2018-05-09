@@ -1,6 +1,13 @@
 Concentration Library Change Log
 ================================
 
+v0.3.1 (09-05-2018)
+===================
+
+* Code documentation via sphinx
+* Improved alignement with Open Risk Manual pages
+
+
 v0.3.0 (27-12-2017)
 ===================
 

@@ -12,10 +12,11 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
-import concentration_library as cl
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+
+import concentration_library as cl
 
 dataset_path = cl.source_path + "datasets/"
 

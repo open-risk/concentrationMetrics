@@ -19,11 +19,10 @@ Created on Fri Feb 29 14:33:17 2015
 Purpose: Demonstrate usage of the Concentration Library
 """
 
-from scipy import special
-import numpy as np
 import matplotlib.pyplot as plt
-import concentration_library as cl
+import numpy as np
 
+import concentration_library as cl
 
 if __name__ == "__main__":
 

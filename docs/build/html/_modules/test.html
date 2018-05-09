@@ -1,0 +1,172 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>test &#8212; Concentration Library 0.3.1 documentation</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Concentration Library 0.3.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Module code</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for test</h1><div class="highlight"><pre>
+<span></span><span class="c1"># encoding: utf-8</span>
+
+<span class="c1"># (c) 2017-2018 Open Risk, all rights reserved</span>
+<span class="c1">#</span>
+<span class="c1"># Concentration Library is licensed under the MIT license a copy of which is included</span>
+<span class="c1"># in the source distribution of TransitionMatrix. This is notwithstanding any licenses of</span>
+<span class="c1"># third-party software included in this distribution. You may not use this file except in</span>
+<span class="c1"># compliance with the License.</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software distributed under</span>
+<span class="c1"># the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,</span>
+<span class="c1"># either express or implied. See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
+
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Fri Feb 29 14:33:17 2015</span>
+<span class="sd">@author: Open Risk</span>
+<span class="sd">Purpose: Testing concentration metrics library</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">concentration_library</span> <span class="k">as</span> <span class="nn">cl</span>
+
+<span class="n">ERROR_MARGIN</span> <span class="o">=</span> <span class="mf">1e-10</span>
+
+
+<div class="viewcode-block" id="TestConcentrationLib"><a class="viewcode-back" href="../test.html#test.TestConcentrationLib">[docs]</a><span class="k">class</span> <span class="nc">TestConcentrationLib</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Test with uniform vectors of n = 0, 1, 1.000.000</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="TestConcentrationLib.test_compare_atkinson_with_R"><a class="viewcode-back" href="../test.html#test.TestConcentrationLib.test_compare_atkinson_with_R">[docs]</a>    <span class="k">def</span> <span class="nf">test_compare_atkinson_with_R</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Comparison with R version in ineq package</span>
+
+<span class="sd">        Results</span>
+<span class="sd">        Atkinson a=0.5:   0.1796591</span>
+<span class="sd">        Atkinson a=1:     0.3518251</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">541</span><span class="p">,</span> <span class="mi">1463</span><span class="p">,</span> <span class="mi">2445</span><span class="p">,</span> <span class="mi">3438</span><span class="p">,</span> <span class="mi">4437</span><span class="p">,</span> <span class="mi">5401</span><span class="p">,</span> <span class="mi">6392</span><span class="p">,</span> <span class="mi">8304</span><span class="p">,</span> <span class="mi">11904</span><span class="p">,</span> <span class="mi">22261</span><span class="p">]</span>
+        <span class="n">ERROR_MARGIN</span> <span class="o">=</span> <span class="mf">1e-5</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">atkinson</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.1796591</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">atkinson</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.3518251</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestConcentrationLib.test_atkinson_uniform"><a class="viewcode-back" href="../test.html#test.TestConcentrationLib.test_atkinson_uniform">[docs]</a>    <span class="k">def</span> <span class="nf">test_atkinson_uniform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">atkinson</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">atkinson</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">atkinson</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestConcentrationLib.test_atkinson"><a class="viewcode-back" href="../test.html#test.TestConcentrationLib.test_atkinson">[docs]</a>    <span class="k">def</span> <span class="nf">test_atkinson</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+        <span class="n">vector</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">atkinson</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestConcentrationLib.test_cl"><a class="viewcode-back" href="../test.html#test.TestConcentrationLib.test_cl">[docs]</a>    <span class="k">def</span> <span class="nf">test_cl</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
+        <span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">cr</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestConcentrationLib.test_bp"><a class="viewcode-back" href="../test.html#test.TestConcentrationLib.test_bp">[docs]</a>    <span class="k">def</span> <span class="nf">test_bp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
+        <span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">cr</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">cl</span><span class="o">.</span><span class="n">berger_parker</span><span class="p">(</span><span class="n">vector</span><span class="p">))</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestConcentrationLib.test_hhi"><a class="viewcode-back" href="../test.html#test.TestConcentrationLib.test_hhi">[docs]</a>    <span class="k">def</span> <span class="nf">test_hhi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">hhi</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestConcentrationLib.test_gini"><a class="viewcode-back" href="../test.html#test.TestConcentrationLib.test_gini">[docs]</a>    <span class="k">def</span> <span class="nf">test_gini</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">gini</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span></div>
+        
+<div class="viewcode-block" id="TestConcentrationLib.test_shannon"><a class="viewcode-back" href="../test.html#test.TestConcentrationLib.test_shannon">[docs]</a>    <span class="k">def</span> <span class="nf">test_shannon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">shannon</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span>        </div>
+        
+<div class="viewcode-block" id="TestConcentrationLib.test_hk"><a class="viewcode-back" href="../test.html#test.TestConcentrationLib.test_hk">[docs]</a>    <span class="k">def</span> <span class="nf">test_hk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">hk</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">hk</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ERROR_MARGIN</span><span class="p">)</span></div></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Concentration Library 0.3.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Module code</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Open Risk.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+    </div>
+  </body>
+</html>

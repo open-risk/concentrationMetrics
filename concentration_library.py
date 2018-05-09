@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017 Open Risk, all rights reserved
+# (c) 2017-2018 Open Risk, all rights reserved
 #
 # Concentration Library is licensed under the MIT license a copy of which is included
 # in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
@@ -12,14 +12,11 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""
-Created on Fri Nov 18 14:24:07 CET 2016
-@author: Open Risk
-Purpose: Concentration metrics library
-The library implements the computation of indexes of inequality and concentration. For
-each index, it provides decomposition between subgroups. Plotting of Lorenz and concentration
-curves are also available
-Version: 0.3
+
+""" Concentration Library
+
+.. moduleauthor: Open Risk
+
 """
 
 import numpy as np
@@ -40,7 +37,9 @@ def total_size(vector):
 
 def get_weights(vector):
     """ Calculate the vector weights
-    :param vector: Positive vector
+
+    :param vector: Positive vector of weights
+    :type vector: numpy array
     :return: Vector weights
     :raise: TypeError if negative total size
     """
@@ -53,10 +52,15 @@ def get_weights(vector):
 
 def cr(vector, n):
     """ Calculate the concentration ratio
+
     :param vector: Positive vector
-    :param n: Integer
+    :type vector: numpy array
+    :param n: Integer selecting the top-n entries
+    :type n: int
     :return: Concentration Ratio (Float)
     :raise: TypeError if n out of range
+
+    `Open Risk Manual Entry for Concentration Ratio <http://www.openriskmanual.org/wiki/Concentration_Ratio>`_
     """
     if n < 0 or n > vector.size:
         raise TypeError('n must be an positive integer smaller than the vector size')
@@ -67,17 +71,25 @@ def cr(vector, n):
 
 
 def berger_parker(vector):
-    """ Calculate the Berger Parker index
+    """ Calculate the Berger Parker index (special version of the Concentration Ratio)
+
     :param vector: Positive vector
+    :type vector: numpy array
     :return: Berger Parker (Float)
+
+    `Open Risk Manual Entry for Berger-Parker Index <http://www.openriskmanual.org/wiki/Concentration_Ratio>`_
     """
     return cr(vector, 1)
 
 
 def hhi(vector):
     """ Calculate the Hirschman-Herfindahl index
+
     :param vector: Positive vector
+    :type vector: numpy array
     :return: HHI (Float)
+
+    `Open Risk Manual Entry for Hirschman-Herfindahl index <http://www.openriskmanual.org/wiki/Herfindahl-Hirschman_Index>`_
     """
     weights = get_weights(vector)
     n = weights.size
@@ -90,9 +102,13 @@ def hhi(vector):
 
 def hk(vector, a):
     """ Calculate the inverted Hannah Kay index
+
     :param vector: Positive vector
+    :type vector: numpy array
     :param a: Integer index parameter alpha
     :return: HK (Float)
+
+    `Open Risk Manual Entry for Hannah Kay Index <http://www.openriskmanual.org/wiki/Hannah_Kay_Index>`_
     """
     weights = get_weights(vector)
     n = weights.size
@@ -114,8 +130,12 @@ def hk(vector, a):
 
 def gini(vector):
     """ Calculate the Gini index
+
     :param vector: Positive vector
+    :type vector: numpy array
     :return: Gini (Float)
+
+    `Open Risk Manual Entry for Gini Index <http://www.openriskmanual.org/wiki/Gini_Index>`_
     """
     vector = sorted(vector, reverse=True)
     weights = get_weights(vector)
@@ -124,13 +144,17 @@ def gini(vector):
         return 0
     else:
         i = np.arange(1, n+1)
-        return (1.0 - 2.0 * np.multiply(i, weights).sum())/n + 1.0
+        return 1.0 + (1.0 - 2.0 * np.multiply(i, weights).sum())/n
 
 
 def shannon(vector):
     """ Calculate the Shannon entropy index
+
     :param vector: Positive vector
+    :type vector: numpy array
     :return: Shannon entropy (Float)
+
+    `Open Risk Manual Entry for Shannon entropy index <http://www.openriskmanual.org/wiki/Shannon_Index>`_
     """
     weights = get_weights(vector)
     weights_nz = weights[weights != 0]
@@ -145,16 +169,23 @@ def shannon(vector):
 
 def atkinson(vector, epsilon):
     """ Calculate the Atkinson inequality index
+
     :param vector: Positive vector
+    :type vector: numpy array
     :param epsilon: Index parameter
+    :type epsilon: float
     :return: Atkinson inequality (Float)
+
+    .. Todo :: Resolve divide by zero when N is very large
+
+    `Open Risk Manual Entry for Atkinson Index <http://www.openriskmanual.org/wiki/Atkinson_Index>`_
     """
     weights = get_weights(vector)
     n = weights.size
     if n == 0:
         return 0
     else:
-        if epsilon < 0:
+        if epsilon <= 0:
             raise TypeError('Epsilon must be strictly positive')
         elif epsilon == 1:
             weights_nz = weights[weights != 0]
@@ -171,9 +202,13 @@ def atkinson(vector, epsilon):
 
 def gei(vector, alpha):
     """ Calculate the Generalized Entropy Index
+
     :param vector: Positive vector
+    :type vector: numpy array
     :param alpha: Index parameter
     :return: Generalized Entropy Index (Float)
+
+    `Open Risk Manual Entry for Generalized Entropy Index <http://www.openriskmanual.org/wiki/Generalized_Entropy_Index>`_
     """
     weights = get_weights(vector)
     n = weights.size
@@ -201,8 +236,12 @@ def gei(vector, alpha):
 
 def theil(vector):
     """ Calculate the Theil Index (Generalized Entropy Index for a=1)
+
     :param vector: Positive vector
+    :type vector: numpy array
     :return: Theil Index (Float)
+
+    `Open Risk Manual Entry for Theil Index <http://www.openriskmanual.org/wiki/Theil_Index>`_
     """
     weights = get_weights(vector)
     return gei(weights, 1)
@@ -210,9 +249,13 @@ def theil(vector):
 
 def kolm(vector, alpha):
     """ Calculate the Kolm index
+
     :param vector: Positive vector
+    :type vector: numpy array
     :param alpha: Index parameter
     :return: Kolm Index (Float)
+
+    `Open Risk Manual Entry for Kolm Index <http://www.openriskmanual.org/wiki/Kolm_Index>`_
     """
     n = vector.size
     if n == 0:
