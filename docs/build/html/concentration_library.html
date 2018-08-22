@@ -15,7 +15,6 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="test module" href="test.html" />
     <link rel="prev" title="concentration_library" href="modules.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -28,9 +27,6 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="test.html" title="test module"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
           <a href="modules.html" title="concentration_library"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Concentration Library 0.3.1 documentation</a> &#187;</li>
@@ -42,9 +38,6 @@
   <h4>Previous topic</h4>
   <p class="topless"><a href="modules.html"
                         title="previous chapter">concentration_library</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="test.html"
-                        title="next chapter">test module</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -75,16 +68,21 @@
   <div class="section" id="module-concentration_library">
 <span id="concentration-library-module"></span><h1>concentration_library module<a class="headerlink" href="#module-concentration_library" title="Permalink to this headline">¶</a></h1>
 <p>Concentration Library</p>
-<dl class="function">
-<dt id="concentration_library.atkinson">
-<code class="descclassname">concentration_library.</code><code class="descname">atkinson</code><span class="sig-paren">(</span><em>vector</em>, <em>epsilon</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#atkinson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.atkinson" title="Permalink to this definition">¶</a></dt>
+<dl class="class">
+<dt id="concentration_library.Index">
+<em class="property">class </em><code class="descclassname">concentration_library.</code><code class="descname">Index</code><a class="reference internal" href="_modules/concentration_library.html#Index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The concentration index object provides the main interface to the various index calculation</p>
+<dl class="method">
+<dt id="concentration_library.Index.atkinson">
+<code class="descname">atkinson</code><span class="sig-paren">(</span><em>data</em>, <em>epsilon</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.atkinson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.atkinson" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Atkinson inequality index</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>vector</strong> (<em>numpy array</em>) – Positive vector</li>
+<li><strong>data</strong> (<em>numpy array</em>) – Positive data</li>
 <li><strong>epsilon</strong> (<em>float</em>) – Index parameter</li>
 </ul>
 </td>
@@ -101,15 +99,15 @@
 <p><a class="reference external" href="http://www.openriskmanual.org/wiki/Atkinson_Index">Open Risk Manual Entry for Atkinson Index</a></p>
 </dd></dl>
 
-<dl class="function">
-<dt id="concentration_library.berger_parker">
-<code class="descclassname">concentration_library.</code><code class="descname">berger_parker</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#berger_parker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.berger_parker" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate the Berger Parker index (special version of the Concentration Ratio)</p>
+<dl class="method">
+<dt id="concentration_library.Index.berger_parker">
+<code class="descname">berger_parker</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.berger_parker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.berger_parker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the Berger Parker Index (special version of the Concentration Ratio)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vector</strong> (<em>numpy array</em>) – Positive vector</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>numpy array</em>) – Positive data</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Berger Parker (Float)</td>
 </tr>
@@ -118,16 +116,16 @@
 <p><a class="reference external" href="http://www.openriskmanual.org/wiki/Concentration_Ratio">Open Risk Manual Entry for Berger-Parker Index</a></p>
 </dd></dl>
 
-<dl class="function">
-<dt id="concentration_library.cr">
-<code class="descclassname">concentration_library.</code><code class="descname">cr</code><span class="sig-paren">(</span><em>vector</em>, <em>n</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#cr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.cr" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate the concentration ratio</p>
+<dl class="method">
+<dt id="concentration_library.Index.cr">
+<code class="descname">cr</code><span class="sig-paren">(</span><em>data</em>, <em>n</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.cr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.cr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the Concentration Ratio</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>vector</strong> (<em>numpy array</em>) – Positive vector</li>
+<li><strong>data</strong> (<em>numpy array</em>) – Positive data</li>
 <li><strong>n</strong> (<em>int</em>) – Integer selecting the top-n entries</li>
 </ul>
 </td>
@@ -143,16 +141,47 @@
 <p><a class="reference external" href="http://www.openriskmanual.org/wiki/Concentration_Ratio">Open Risk Manual Entry for Concentration Ratio</a></p>
 </dd></dl>
 
-<dl class="function">
-<dt id="concentration_library.gei">
-<code class="descclassname">concentration_library.</code><code class="descname">gei</code><span class="sig-paren">(</span><em>vector</em>, <em>alpha</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#gei"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.gei" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="concentration_library.Index.ellison_glaeser">
+<code class="descname">ellison_glaeser</code><span class="sig-paren">(</span><em>data</em>, <em>na</em>, <em>ni</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.ellison_glaeser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.ellison_glaeser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ellison and Glaeser (1997) indexes of industrial concentration.</p>
+<p>Implemented as in equation (5) of original reference
+Input data are a data frame of three columns of the following type:
+Exposure    Area        Industry
+Float       Categorical Categorical</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The ordering of the columns is important. The index is not symmetric with respect to area and industry factors</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data</strong> (<em>pandas dataframe</em>) – exposure data</li>
+<li><strong>na</strong> (<em>integer</em>) – number of areas</li>
+<li><strong>ni</strong> (<em>integer</em>) – number of industries</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">EG Indexes (list)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="http://www.openriskmanual.org/wiki/Ellison_Glaeser_Index">Open Risk Manual Entry for Ellison-Glaeser Index</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="concentration_library.Index.gei">
+<code class="descname">gei</code><span class="sig-paren">(</span><em>data</em>, <em>alpha</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.gei"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.gei" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Generalized Entropy Index</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>vector</strong> (<em>numpy array</em>) – Positive vector</li>
+<li><strong>data</strong> (<em>numpy array</em>) – Positive data</li>
 <li><strong>alpha</strong> – Index parameter</li>
 </ul>
 </td>
@@ -165,15 +194,15 @@
 <p><a class="reference external" href="http://www.openriskmanual.org/wiki/Generalized_Entropy_Index">Open Risk Manual Entry for Generalized Entropy Index</a></p>
 </dd></dl>
 
-<dl class="function">
-<dt id="concentration_library.get_weights">
-<code class="descclassname">concentration_library.</code><code class="descname">get_weights</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#get_weights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.get_weights" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate the vector weights</p>
+<dl class="method">
+<dt id="concentration_library.Index.get_weights">
+<code class="descname">get_weights</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.get_weights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.get_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate data weights</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vector</strong> (<em>numpy array</em>) – Positive vector of weights</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>numpy array</em>) – Positive data of weights</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Vector weights</td>
 </tr>
@@ -183,50 +212,54 @@
 </table>
 </dd></dl>
 
-<dl class="function">
-<dt id="concentration_library.gini">
-<code class="descclassname">concentration_library.</code><code class="descname">gini</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#gini"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.gini" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="concentration_library.Index.gini">
+<code class="descname">gini</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.gini"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.gini" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Gini index</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vector</strong> (<em>numpy array</em>) – Positive vector</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>numpy array</em>) – Positive data</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Gini (Float)</td>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The formula appears also with the opposite sign convention</p>
+</div>
 <p><a class="reference external" href="http://www.openriskmanual.org/wiki/Gini_Index">Open Risk Manual Entry for Gini Index</a></p>
 </dd></dl>
 
-<dl class="function">
-<dt id="concentration_library.hhi">
-<code class="descclassname">concentration_library.</code><code class="descname">hhi</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#hhi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.hhi" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="concentration_library.Index.hhi">
+<code class="descname">hhi</code><span class="sig-paren">(</span><em>data</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.hhi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.hhi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Hirschman-Herfindahl index</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vector</strong> (<em>numpy array</em>) – Positive vector</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>numpy array</em>) – Positive data</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">HHI (Float)</td>
 </tr>
 </tbody>
 </table>
-<p><a class="reference external" href="http://www.openriskmanual.org/wiki/Herfindahl-Hirschman_Index">Open Risk Manual Entry for Hirschman-Herfindahl index</a></p>
+<p><a class="reference external" href="http://www.openriskmanual.org/wiki/Herfindahl-Hirschman_Index">Open Risk Manual Entry for Hirschman-Herfindahl Index</a></p>
 </dd></dl>
 
-<dl class="function">
-<dt id="concentration_library.hk">
-<code class="descclassname">concentration_library.</code><code class="descname">hk</code><span class="sig-paren">(</span><em>vector</em>, <em>a</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#hk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.hk" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="concentration_library.Index.hk">
+<code class="descname">hk</code><span class="sig-paren">(</span><em>data</em>, <em>a</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.hk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.hk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the inverted Hannah Kay index</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>vector</strong> (<em>numpy array</em>) – Positive vector</li>
+<li><strong>data</strong> (<em>numpy array</em>) – Positive data</li>
 <li><strong>a</strong> – Integer index parameter alpha</li>
 </ul>
 </td>
@@ -239,16 +272,33 @@
 <p><a class="reference external" href="http://www.openriskmanual.org/wiki/Hannah_Kay_Index">Open Risk Manual Entry for Hannah Kay Index</a></p>
 </dd></dl>
 
-<dl class="function">
-<dt id="concentration_library.kolm">
-<code class="descclassname">concentration_library.</code><code class="descname">kolm</code><span class="sig-paren">(</span><em>vector</em>, <em>alpha</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#kolm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.kolm" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="concentration_library.Index.hoover">
+<code class="descname">hoover</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.hoover"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.hoover" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the Hoover index</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>numpy array</em>) – Positive data</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Hoover (Float)</td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="http://www.openriskmanual.org/wiki/Hoover_Index">Open Risk Manual Entry for Hoover Index</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="concentration_library.Index.kolm">
+<code class="descname">kolm</code><span class="sig-paren">(</span><em>data</em>, <em>alpha</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.kolm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.kolm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Kolm index</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>vector</strong> (<em>numpy array</em>) – Positive vector</li>
+<li><strong>data</strong> (<em>numpy array</em>) – Positive data</li>
 <li><strong>alpha</strong> – Index parameter</li>
 </ul>
 </td>
@@ -261,32 +311,32 @@
 <p><a class="reference external" href="http://www.openriskmanual.org/wiki/Kolm_Index">Open Risk Manual Entry for Kolm Index</a></p>
 </dd></dl>
 
-<dl class="function">
-<dt id="concentration_library.shannon">
-<code class="descclassname">concentration_library.</code><code class="descname">shannon</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#shannon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.shannon" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="concentration_library.Index.shannon">
+<code class="descname">shannon</code><span class="sig-paren">(</span><em>data</em>, <em>normalized=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.shannon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.shannon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Shannon entropy index</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vector</strong> (<em>numpy array</em>) – Positive vector</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>numpy array</em>) – Positive data</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Shannon entropy (Float)</td>
 </tr>
 </tbody>
 </table>
-<p><a class="reference external" href="http://www.openriskmanual.org/wiki/Shannon_Index">Open Risk Manual Entry for Shannon entropy index</a></p>
+<p><a class="reference external" href="http://www.openriskmanual.org/wiki/Shannon_Index">Open Risk Manual Entry for Shannon Entropy Index</a></p>
 </dd></dl>
 
-<dl class="function">
-<dt id="concentration_library.theil">
-<code class="descclassname">concentration_library.</code><code class="descname">theil</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#theil"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.theil" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="concentration_library.Index.theil">
+<code class="descname">theil</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.theil"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.theil" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Theil Index (Generalized Entropy Index for a=1)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vector</strong> (<em>numpy array</em>) – Positive vector</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>numpy array</em>) – Positive data</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Theil Index (Float)</td>
 </tr>
@@ -295,10 +345,12 @@
 <p><a class="reference external" href="http://www.openriskmanual.org/wiki/Theil_Index">Open Risk Manual Entry for Theil Index</a></p>
 </dd></dl>
 
-<dl class="function">
-<dt id="concentration_library.total_size">
-<code class="descclassname">concentration_library.</code><code class="descname">total_size</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#total_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.total_size" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="concentration_library.Index.total_size">
+<code class="descname">total_size</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/concentration_library.html#Index.total_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#concentration_library.Index.total_size" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
 
 </div>
 
@@ -317,9 +369,6 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="test.html" title="test module"
-             >next</a> |</li>
         <li class="right" >
           <a href="modules.html" title="concentration_library"
              >previous</a> |</li>

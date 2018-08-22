@@ -12,23 +12,29 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
-import concentration_library as cl
+import numpy as np
 import pandas as pd
 
-dataset_path = cl.source_path + "datasets/"
+import concentration_library as cl
 
-# Comparison with R version in IC2 package on hhbudget dataset
-# Expected Results:
-# Epsilon 0: 0
-# Epsilon 1: 0.3245925
-# Epsilon 2: 0.4951668
-# Epsilon 3: 0.6053387
-# Epsilon 4: 0.6856425
+myIndex = cl.Index()
 
-hhbudgets = pd.read_csv(dataset_path + "hhbudgets.csv")
-y = hhbudgets.as_matrix(columns=["ingreso"])
-print(cl.atkinson(y, 0))
-print(cl.atkinson(y, 1))
-print(cl.atkinson(y, 2))
-print(cl.atkinson(y, 3))
-print(cl.atkinson(y, 4))
+# RANDOM PARETO EXPOSURES / UNIFORM INDUSTRIES)
+# Number of observations
+N = 100000
+# Number of areas
+Na = 5
+# Number of industries
+Ni = 3
+# Pareto exposure distribution
+a, m = 3., 2.  # shape and mode
+exposure = (np.random.pareto(a, N) + 1) * m
+# Uniform area distribution (276 NUTS 2 Regions)
+area = np.random.randint(0, Na, N)
+# Uniform industry distribution (21 NACE categories)
+industry = np.random.randint(0, Ni, N)
+
+# create dataframe
+d = {'Exposure': exposure, 'Area': area, 'Industry': industry}
+data = pd.DataFrame(data=d)
+print(myIndex.ellison_glaeser(data, Na, Ni))

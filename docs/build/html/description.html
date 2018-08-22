@@ -16,7 +16,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Concentration Library Change Log" href="changelog.html" />
-    <link rel="prev" title="Concentration Library (CL)" href="readme.html" /> 
+    <link rel="prev" title="Welcome to Concentration Library’s documentation!" href="index.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -31,7 +31,7 @@
           <a href="changelog.html" title="Concentration Library Change Log"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="readme.html" title="Concentration Library (CL)"
+          <a href="index.html" title="Welcome to Concentration Library’s documentation!"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Concentration Library 0.3.1 documentation</a> &#187;</li> 
       </ul>
@@ -42,15 +42,19 @@
   <ul>
 <li><a class="reference internal" href="#">Concentration Library</a><ul>
 <li><a class="reference internal" href="#overview-of-main-features">Overview of Main Features</a></li>
-<li><a class="reference internal" href="#list-of-implemented-indexes">List of Implemented Indexes</a></li>
 <li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#file-structure">File structure</a></li>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li><a class="reference internal" href="#datasets">Datasets</a></li>
+<li><a class="reference internal" href="#testing">Testing</a></li>
+<li><a class="reference internal" href="#comparison-with-r-implementations">Comparison with R implementations</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="readme.html"
-                        title="previous chapter">Concentration Library (CL)</a></p>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Concentration Library’s documentation!</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="changelog.html"
                         title="next chapter">Concentration Library Change Log</a></p>
@@ -89,25 +93,8 @@ package aimed at becoming a reference implementation of indicators used in the a
 <h2>Overview of Main Features<a class="headerlink" href="#overview-of-main-features" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>exhaustive collection of concentration and inequality indexes and metrics</li>
-<li>supports file input/output in json and csv formats</li>
+<li>supports file input/output in both json and csv formats</li>
 <li>visualization using matplotlib</li>
-</ul>
-</div>
-<div class="section" id="list-of-implemented-indexes">
-<h2>List of Implemented Indexes<a class="headerlink" href="#list-of-implemented-indexes" title="Permalink to this headline">¶</a></h2>
-<p>An overview of the implemented metrics is available at the [Open Risk Manual](<a class="reference external" href="http://www.openriskmanual.org/wiki/Concentration_Index">http://www.openriskmanual.org/wiki/Concentration_Index</a>)</p>
-<p>The below list provides specific documentation URL’s for each one of the implement indexes</p>
-<ul class="simple">
-<li>[Atkinson Index](<a class="reference external" href="http://www.openriskmanual.org/wiki/Atkinson_Index">http://www.openriskmanual.org/wiki/Atkinson_Index</a>)</li>
-<li>[Berger-Parker Index](<a class="reference external" href="http://www.openriskmanual.org/wiki/Berger-Parker_Index">http://www.openriskmanual.org/wiki/Berger-Parker_Index</a>)</li>
-<li>[Concentration Ratio](<a class="reference external" href="http://www.openriskmanual.org/wiki/Concentration_Ratio">http://www.openriskmanual.org/wiki/Concentration_Ratio</a>)</li>
-<li>[Gini Index](<a class="reference external" href="http://www.openriskmanual.org/wiki/Gini_Index">http://www.openriskmanual.org/wiki/Gini_Index</a>)</li>
-<li>[Theil Index](<a class="reference external" href="http://www.openriskmanual.org/wiki/Theil_Index">http://www.openriskmanual.org/wiki/Theil_Index</a>)</li>
-<li>[Hannah-Kay Index](<a class="reference external" href="http://www.openriskmanual.org/wiki/Hannah_Kay_Index">http://www.openriskmanual.org/wiki/Hannah_Kay_Index</a>)</li>
-<li>[Herfindahl-Hirschman Index](<a class="reference external" href="http://www.openriskmanual.org/wiki/Herfindahl-Hirschman_Index">http://www.openriskmanual.org/wiki/Herfindahl-Hirschman_Index</a>)</li>
-<li>[Shannon Index](<a class="reference external" href="http://www.openriskmanual.org/wiki/Shannon_Index">http://www.openriskmanual.org/wiki/Shannon_Index</a>)</li>
-<li>[Generalized Entropy Index (Renyi)](<a class="reference external" href="http://www.openriskmanual.org/wiki/Generalized_Entropy_Index">http://www.openriskmanual.org/wiki/Generalized_Entropy_Index</a>)</li>
-<li>[Kolm Index](<a class="reference external" href="http://www.openriskmanual.org/wiki/Kolm_Index">http://www.openriskmanual.org/wiki/Kolm_Index</a>)</li>
 </ul>
 </div>
 <div class="section" id="usage">
@@ -116,13 +103,50 @@ package aimed at becoming a reference implementation of indicators used in the a
 portfolio data:</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">concentration_library</span> <span class="k">as</span> <span class="nn">cl</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
+<span class="n">myIndex</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Index</span><span class="p">()</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mf">1.7</span>
 <span class="n">portfolio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">zipf</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">hhi</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">hhi</span><span class="p">(</span><span class="n">portfolio</span><span class="p">)</span>
-<span class="n">gini</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">gini</span><span class="p">(</span><span class="n">portfolio</span><span class="p">)</span>
+<span class="n">hhi</span> <span class="o">=</span> <span class="n">myIndex</span><span class="o">.</span><span class="n">hhi</span><span class="p">(</span><span class="n">portfolio</span><span class="p">)</span>
+<span class="n">gini</span> <span class="o">=</span> <span class="n">myIndex</span><span class="o">.</span><span class="n">gini</span><span class="p">(</span><span class="n">portfolio</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>[A Comparison of HHI and Gini values for random portfolios](hhi_vs_gini.png)</p>
+</div>
+<div class="section" id="file-structure">
+<h2>File structure<a class="headerlink" href="#file-structure" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>concentration_library.py The library module</li>
+<li>datasets/ Contains a variety of datasets useful for getting started with the Concentration Library</li>
+<li>examples/ Variety of usage examples</li>
+<li>docs/ Sphinx generated documentation</li>
+<li>tests/ testing the implementation</li>
+</ul>
+<p>All indexes are currently implemented in concentration_library.py as methods of the Index object</p>
+</div>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>numpy</li>
+<li>pandas</li>
+<li>scipy</li>
+</ul>
+</div>
+<div class="section" id="datasets">
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<p>Version 0.3.1 includes two real datasets currently used primarily for testing and comparison with R implementations</p>
+<ul class="simple">
+<li>hhbudget.csv</li>
+<li>Ilocos.csv</li>
+</ul>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>Run python test.py</p>
+</div>
+<div class="section" id="comparison-with-r-implementations">
+<h2>Comparison with R implementations<a class="headerlink" href="#comparison-with-r-implementations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>atkinson_test.py compares the Atkinson function with the IC2/Atk function</li>
+</ul>
 </div>
 </div>
 
@@ -145,7 +169,7 @@ portfolio data:</p>
           <a href="changelog.html" title="Concentration Library Change Log"
              >next</a> |</li>
         <li class="right" >
-          <a href="readme.html" title="Concentration Library (CL)"
+          <a href="index.html" title="Welcome to Concentration Library’s documentation!"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Concentration Library 0.3.1 documentation</a> &#187;</li> 
       </ul>

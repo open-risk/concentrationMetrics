@@ -10,7 +10,6 @@ Welcome to Concentration Library's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   readme
    description
    changelog
    modules

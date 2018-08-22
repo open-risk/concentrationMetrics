@@ -2,7 +2,7 @@
 
 # (c) 2017-2018 Open Risk, all rights reserved
 #
-# Concentration Library is licensed under the MIT license a copy of which is included
+# TransitionMatrix is licensed under the Apache 2.0 license a copy of which is included
 # in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
 # third-party software included in this distribution. You may not use this file except in
 # compliance with the License.
@@ -12,81 +12,19 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
-# -*- coding: utf-8 -*-
 """
-Created on Fri Feb 29 14:33:17 2015
-@author: Open Risk
-Purpose: Testing concentration metrics library
+run the test suite
 
 """
 
 import unittest
+import sys
+from concentration_library import source_path
+sys.path.append(source_path)
 
-import numpy as np
+loader = unittest.TestLoader()
+start_dir = source_path + 'tests'
+suite = loader.discover(start_dir)
 
-import concentration_library as cl
-
-ERROR_MARGIN = 1e-10
-
-
-class TestConcentrationLib(unittest.TestCase):
-    """ Test with uniform vectors of n = 0, 1, 1.000.000
-
-    """
-
-    def test_compare_atkinson_with_R(self):
-        """ Comparison with R version in ineq package
-
-        Results
-        Atkinson a=0.5:   0.1796591
-        Atkinson a=1:     0.3518251
-        """
-        x = [541, 1463, 2445, 3438, 4437, 5401, 6392, 8304, 11904, 22261]
-        ERROR_MARGIN = 1e-5
-        self.assertTrue(abs(cl.atkinson(x, 0.5) - 0.1796591) < ERROR_MARGIN)
-        self.assertTrue(abs(cl.atkinson(x, 1.0) - 0.3518251) < ERROR_MARGIN)
-
-    def test_atkinson_uniform(self):
-        vector = np.ones(1000000)
-        self.assertTrue(abs(cl.atkinson(vector, 0.5) - 0.0) < ERROR_MARGIN)
-        self.assertTrue(abs(cl.atkinson(vector, 1) - 0.0) < ERROR_MARGIN)
-        self.assertTrue(abs(cl.atkinson(vector, 2) - 0.0) < ERROR_MARGIN)
-
-    def test_atkinson(self):
-        vector = np.zeros(1000)
-        vector[0] = 1
-        self.assertTrue(abs(cl.atkinson(vector, 2) - 1.0) < ERROR_MARGIN)
-
-    def test_cl(self):
-        n = 1000
-        vector = np.ones(n)
-        self.assertTrue(abs(cl.cr(vector, 1) - 1.0 / n) < ERROR_MARGIN)
-
-    def test_bp(self):
-        n = 1000
-        vector = np.ones(n)
-        self.assertTrue(abs(cl.cr(vector, 1) - cl.berger_parker(vector)) < ERROR_MARGIN)
-
-    def test_hhi(self):
-        vector = np.ones(10)
-        self.assertTrue(abs(cl.hhi(vector) - 0.0) < ERROR_MARGIN)
-
-    def test_gini(self):
-        vector = np.ones(10)
-        self.assertTrue(abs(cl.gini(vector) - 0.0) < ERROR_MARGIN)
-        
-    def test_shannon(self):
-        vector = np.ones(10)
-        self.assertTrue(abs(cl.shannon(vector) - 0.0) < ERROR_MARGIN)        
-        
-    def test_hk(self):
-        n = 10
-        vector = np.ones(n)
-        self.assertTrue(abs(cl.hk(vector, 1) - 1.0 / n) < ERROR_MARGIN)
-        self.assertTrue(abs(cl.hk(vector, 3) - 1.0 / n) < ERROR_MARGIN)
-
-
-if __name__ == "__main__":
-
-    unittest.main()
-
+runner = unittest.TextTestRunner()
+runner.run(suite)

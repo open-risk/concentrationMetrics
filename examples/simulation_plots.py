@@ -29,17 +29,18 @@ if __name__ == "__main__":
 # generate portfolio data (list)
 # for some realism we use the Zipf power law
 
-    a = 1.7 # zipf parameter
+    myIndex = cl.Index()
+
+    a = 1.7  # zipf parameter
     x = []
     y = []
     for iter in range(0, 10000):  # portfolio simulations
         # Generate a portfolio of 100 entities
-        portfolio = np.random.zipf(a, 100)    
-        portfolio = sorted(portfolio, reverse=True)
-        weights = cl.get_weights(portfolio)
+        portfolio = np.random.zipf(a, 100)
+        portfolio = np.array(sorted(portfolio, reverse=True))
         # Compute HHI and Gini indexes
-        hhi = cl.hhi(weights)
-        gini = cl.gini(weights)
+        hhi = myIndex.hhi(portfolio)
+        gini = myIndex.gini(portfolio)
         x.append(hhi)
         y.append(gini)
     # Plot values of HHI against Gini

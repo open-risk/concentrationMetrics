@@ -9,27 +9,8 @@ Overview of Main Features
 =========================
 
 * exhaustive collection of concentration and inequality indexes and metrics
-* supports file input/output in json and csv formats
+* supports file input/output in both json and csv formats
 * visualization using matplotlib
-
-
-List of Implemented Indexes
-===============================
-
-An overview of the implemented metrics is available at the [Open Risk Manual](http://www.openriskmanual.org/wiki/Concentration_Index)
-
-The below list provides specific documentation URL's for each one of the implement indexes
-
-* [Atkinson Index](http://www.openriskmanual.org/wiki/Atkinson_Index)
-* [Berger-Parker Index](http://www.openriskmanual.org/wiki/Berger-Parker_Index)
-* [Concentration Ratio](http://www.openriskmanual.org/wiki/Concentration_Ratio)
-* [Gini Index](http://www.openriskmanual.org/wiki/Gini_Index)
-* [Theil Index](http://www.openriskmanual.org/wiki/Theil_Index)
-* [Hannah-Kay Index](http://www.openriskmanual.org/wiki/Hannah_Kay_Index)
-* [Herfindahl-Hirschman Index](http://www.openriskmanual.org/wiki/Herfindahl-Hirschman_Index)
-* [Shannon Index](http://www.openriskmanual.org/wiki/Shannon_Index)
-* [Generalized Entropy Index (Renyi)](http://www.openriskmanual.org/wiki/Generalized_Entropy_Index)
-* [Kolm Index](http://www.openriskmanual.org/wiki/Kolm_Index)
 
 
 Usage
@@ -42,10 +23,45 @@ portfolio data:
 
     import concentration_library as cl
     import numpy
+    myIndex = cl.Index()
     a = 1.7
     portfolio = np.random.zipf(a, 100)
-    hhi = cl.hhi(portfolio)
-    gini = cl.gini(portfolio)
+    hhi = myIndex.hhi(portfolio)
+    gini = myIndex.gini(portfolio)
 
 
-[A Comparison of HHI and Gini values for random portfolios](hhi_vs_gini.png)
+File structure
+==============
+
+* concentration\_library.py The library module
+* datasets/ Contains a variety of datasets useful for getting started with the Concentration Library
+* examples/ Variety of usage examples
+* docs/ Sphinx generated documentation
+* tests/ testing the implementation
+
+All indexes are currently implemented in concentration\_library.py as methods of the Index object
+
+Dependencies
+============
+
+-   numpy
+-   pandas
+-   scipy
+
+Datasets
+========
+
+Version 0.3.1 includes two real datasets currently used primarily for testing and comparison with R implementations
+
+-   hhbudget.csv
+-   Ilocos.csv
+
+Testing
+=======
+
+Run python test.py
+
+Comparison with R implementations
+=================================
+
+-   atkinson\_test.py compares the Atkinson function with the IC2/Atk function
