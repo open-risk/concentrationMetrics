@@ -26,8 +26,8 @@ import concentration_library as cl
 
 if __name__ == "__main__":
 
-# generate portfolio data (list)
-# for some realism we use the Zipf power law
+    # generate portfolio data (list)
+    # for some realism we use the Zipf power law
 
     myIndex = cl.Index()
 

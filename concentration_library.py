@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017-2018 Open Risk, all rights reserved
+# (c) 2017-2019 Open Risk, all rights reserved
 #
 # Concentration Library is licensed under the MIT license a copy of which is included
 # in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
@@ -24,12 +24,11 @@ import pandas as pd
 
 # ADJUST THIS TO REFLECT YOUR OWN ENVIRONMENT!
 # Set the full path including trailing slash
-source_path = '/path_to_concentration_library/'
+source_path = './'
 dataset_path = source_path + "datasets/"
 
 
 class Index(object):
-
     """  The concentration index object provides the main interface to the various index calculation
 
 
@@ -37,6 +36,10 @@ class Index(object):
 
     def __init__(self):
         pass
+
+    # call index by name
+    def callMethod(self, name, data, *args):
+        return getattr(self, name)(data, *args)
 
     # calculate total size
     def total_size(self, data):
@@ -77,7 +80,7 @@ class Index(object):
         :return: Concentration Ratio (Float)
         :raise: TypeError if n out of range
 
-        `Open Risk Manual Entry for Concentration Ratio <http://www.openriskmanual.org/wiki/Concentration_Ratio>`_
+        `Open Risk Manual Entry for Concentration Ratio <https://www.openriskmanual.org/wiki/Concentration_Ratio>`_
         """
         if n < 0 or n > data.size:
             raise TypeError('n must be an positive integer smaller than the data size')
@@ -93,21 +96,23 @@ class Index(object):
         :type data: numpy array
         :return: Berger Parker (Float)
 
-        `Open Risk Manual Entry for Berger-Parker Index <http://www.openriskmanual.org/wiki/Concentration_Ratio>`_
+        `Open Risk Manual Entry for Berger-Parker Index <https://www.openriskmanual.org/wiki/Concentration_Ratio>`_
         """
         return self.cr(data, 1)
 
-    def hhi(self, data, normalized=True):
-        """ Calculate the Hirschman-Herfindahl index
+    def hhi(self, data, normalized=True, ci=None, samples=None):
+        """ Calculate the Herfindahl-Hirschman index
 
         :param data: Positive data
         :type data: numpy array
         :return: HHI (Float)
 
-        `Open Risk Manual Entry for Hirschman-Herfindahl Index <http://www.openriskmanual.org/wiki/Herfindahl-Hirschman_Index>`_
+        `Open Risk Manual Entry for Hirschman-Herfindahl Index <https://www.openriskmanual.org/wiki/Herfindahl-Hirschman_Index>`_
         """
+        # Normalize the data
         weights = self.get_weights(data)
         n = weights.size
+        # Compute the HHI
         if n == 0:
             return 0
         else:
@@ -125,7 +130,7 @@ class Index(object):
         :param a: Integer index parameter alpha
         :return: HK (Float)
 
-        `Open Risk Manual Entry for Hannah Kay Index <http://www.openriskmanual.org/wiki/Hannah_Kay_Index>`_
+        `Open Risk Manual Entry for Hannah Kay Index <https://www.openriskmanual.org/wiki/Hannah_Kay_Index>`_
         """
         weights = self.get_weights(data)
         n = weights.size
@@ -151,7 +156,7 @@ class Index(object):
         :type data: numpy array
         :return: Hoover (Float)
 
-        `Open Risk Manual Entry for Hoover Index <http://www.openriskmanual.org/wiki/Hoover_Index>`_
+        `Open Risk Manual Entry for Hoover Index <https://www.openriskmanual.org/wiki/Hoover_Index>`_
         """
 
         weights = self.get_weights(data)
@@ -170,7 +175,7 @@ class Index(object):
 
         .. note:: The formula appears also with the opposite sign convention
 
-        `Open Risk Manual Entry for Gini Index <http://www.openriskmanual.org/wiki/Gini_Index>`_
+        `Open Risk Manual Entry for Gini Index <https://www.openriskmanual.org/wiki/Gini_Index>`_
         """
         data = np.array(sorted(data, reverse=True))
         weights = self.get_weights(data)
@@ -188,7 +193,7 @@ class Index(object):
         :type data: numpy array
         :return: Shannon entropy (Float)
 
-        `Open Risk Manual Entry for Shannon Entropy Index <http://www.openriskmanual.org/wiki/Shannon_Index>`_
+        `Open Risk Manual Entry for Shannon Entropy Index <https://www.openriskmanual.org/wiki/Shannon_Index>`_
         """
         weights = self.get_weights(data)
         # remove zero weights
@@ -215,7 +220,7 @@ class Index(object):
 
         .. Todo :: Resolve divide by zero when N is very large
 
-        `Open Risk Manual Entry for Atkinson Index <http://www.openriskmanual.org/wiki/Atkinson_Index>`_
+        `Open Risk Manual Entry for Atkinson Index <https://www.openriskmanual.org/wiki/Atkinson_Index>`_
         """
         weights = self.get_weights(data)
         n = weights.size
@@ -223,7 +228,7 @@ class Index(object):
             return 0
         else:
             if epsilon <= 0:
-                raise TypeError('Epsilon must be strictly positive')
+                raise TypeError('Epsilon must be strictly positive (>0.0)')
             elif epsilon == 1:
                 weights_nz = weights[weights != 0]
                 n = weights_nz.size
@@ -244,7 +249,7 @@ class Index(object):
         :param alpha: Index parameter
         :return: Generalized Entropy Index (Float)
 
-        `Open Risk Manual Entry for Generalized Entropy Index <http://www.openriskmanual.org/wiki/Generalized_Entropy_Index>`_
+        `Open Risk Manual Entry for Generalized Entropy Index <https://www.openriskmanual.org/wiki/Generalized_Entropy_Index>`_
         """
         weights = self.get_weights(data)
         n = weights.size
@@ -276,7 +281,7 @@ class Index(object):
         :type data: numpy array
         :return: Theil Index (Float)
 
-        `Open Risk Manual Entry for Theil Index <http://www.openriskmanual.org/wiki/Theil_Index>`_
+        `Open Risk Manual Entry for Theil Index <https://www.openriskmanual.org/wiki/Theil_Index>`_
         """
         weights = self.get_weights(data)
         return self.gei(weights, 1)
@@ -289,7 +294,7 @@ class Index(object):
         :param alpha: Index parameter
         :return: Kolm Index (Float)
 
-        `Open Risk Manual Entry for Kolm Index <http://www.openriskmanual.org/wiki/Kolm_Index>`_
+        `Open Risk Manual Entry for Kolm Index <https://www.openriskmanual.org/wiki/Kolm_Index>`_
         """
         n = data.size
         if n == 0:
@@ -319,7 +324,7 @@ class Index(object):
         :type ni: integer
         :return: EG Indexes (list)
 
-        `Open Risk Manual Entry for Ellison-Glaeser Index <http://www.openriskmanual.org/wiki/Ellison_Glaeser_Index>`_
+        `Open Risk Manual Entry for Ellison-Glaeser Index <https://www.openriskmanual.org/wiki/Ellison_Glaeser_Index>`_
         """
 
         #
@@ -347,7 +352,8 @@ class Index(object):
         s = np.zeros((ni, na))
         for industry_index, group in industry_groups:
             # compute industry totals
-            x = group['Exposure'].as_matrix()
+            # x = group['Exposure'].as_matrix()
+            x = group['Exposure'].values
             i_total = x.sum()
             total += i_total
             industry_totals.append(i_total)
@@ -377,3 +383,24 @@ class Index(object):
             eg_indexes.append(gi)
 
         return eg_indexes
+
+    def compute(self, data, *args, ci=None, samples=None, index='hhi'):
+        # Compute bootstraped confidence interval estimates
+
+        # Actual value of the index
+        value = self.callMethod(index, data, *args)
+        if ci is not None:
+            sample_values = []
+            for s in range(samples):
+                sample_data = np.random.choice(data, size=len(data), replace=True)
+                sample_values.append(self.callMethod(index, sample_data, *args))
+
+            values = np.array(sample_values)
+            values.sort()
+            lower_bound_index = int((1.0 - ci) * samples)
+            upper_bound_index = int(ci * samples)
+            lower_bound = values[lower_bound_index]
+            upper_bound = values[upper_bound_index]
+            return lower_bound, value, upper_bound
+        else:
+            return value

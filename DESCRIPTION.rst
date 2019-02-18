@@ -10,6 +10,7 @@ Overview of Main Features
 
 * exhaustive collection of concentration and inequality indexes and metrics
 * supports file input/output in both json and csv formats
+* computation of confidence intervals via bootstraping
 * visualization using matplotlib
 
 
@@ -23,11 +24,31 @@ portfolio data:
 
     import concentration_library as cl
     import numpy
-    myIndex = cl.Index()
+    # Create some data
     a = 1.7
     portfolio = np.random.zipf(a, 100)
+    # Calculate some indexes
+    myIndex = cl.Index()
     hhi = myIndex.hhi(portfolio)
     gini = myIndex.gini(portfolio)
+
+
+Computing the confidence interval
+
+
+.. code:: python
+
+    import concentration_library as cl
+    import numpy
+    # Create some data
+    a = 1.7
+    portfolio = np.random.zipf(a, 100)
+    # Calculate some indexes
+    myIndex = cl.Index()
+    lower_bound, value, upper_bound = myIndex.compute(portfolio, index='hhi', ci=0.95, samples=10000)
+
+
+Many more examples in the examples directory
 
 
 File structure

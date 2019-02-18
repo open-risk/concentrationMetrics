@@ -13,9 +13,6 @@ Further Spatial / Multi-Group Concentrations Indexes
 - Further indexes of the Ellison-Glaeser family
 - Distance based measures
 
-Statistical Measures
---------------------
-- Provide confidence intervals via bootstraping
 
 Implementation / Functionality
 ------------------------------

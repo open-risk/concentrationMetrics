@@ -1,6 +1,13 @@
 Concentration Library Change Log
 ================================
 
+v0.4.1 (18-02-2019)
+===================
+
+* Provide confidence intervals via bootstraping
+* Improved test documentation
+* Fixed documentation links
+
 v0.4 (17-08-2018)
 ===================
 * Added new one-dimensional indexes: Hoover
