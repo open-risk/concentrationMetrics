@@ -1,5 +1,11 @@
-Concentration Library Change Log
+ConcentrationMetrics Change Log
 ================================
+
+v0.4.2 (08-03-2019)
+===================
+
+* Renamed library to concentrationMetrics to emphasize the nature of the library and follow the naming conventions of other Open Risk projects (transitionMatrix, correlationMatrix etc)
+* Added readthedocs documentation
 
 v0.4.1 (18-02-2019)
 ===================

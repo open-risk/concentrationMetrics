@@ -1,16 +1,23 @@
-Concentration Library (CL)
+Intro
 ==========================
+concentrationMetrics is a python library for the computation of various concentration, diversification and inequality indices. The library implements the computation of all well known indexes of inequality and concentration. 
 
-A python library for the computation of various concentration, diversification and inequality indices.
+You can use concentrationMetrics to
 
-The library implements the computation of all well known indexes of inequality and concentration. 
+- access an exhaustive collection of concentration and inequality indexes and metrics
+- perform file input/output in both json and csv formats
+- computate indices with confidence intervals via bootstraping
+- visualize using matplotlib
+
+
+Key Information
+================
 
 * Author: Open Risk, <https://www.openriskmanagement.com>
 * License: MIT
-* Documentation: Open Risk Manual, <https://www.openriskmanual.org/wiki/Category:Concentration_Index>
-* Training: Open Risk Academy, <https://www.openriskacademy.com/login/index.php>
-* Development website: <https://github.com/open-risk/concentration_library>
-* Production instance (API): <https://www.opencpm.com>
+* Mathematical Documentation: Open Risk Manual, <https://www.openriskmanual.org/wiki/Category:Concentration_Index>
+* Code Documentation: [Read The Docs](https://concentrationmetrics.readthedocs.io/en/latest/index.html)
+* Development website: <https://github.com/open-risk/concentrationMetrics>
 
 List of Implemented Indexes
 ===============================
@@ -38,7 +45,7 @@ The below list provides specific documentation URL's for each one of the impleme
 Examples
 ========
 
-Comparing two indexes for 
+Comparing two indexes across a range of input portfolio data 
 
 ![image](examples/hhi_vs_gini.png)
 

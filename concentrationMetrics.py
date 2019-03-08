@@ -2,7 +2,7 @@
 
 # (c) 2017-2019 Open Risk, all rights reserved
 #
-# Concentration Library is licensed under the MIT license a copy of which is included
+# ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
 # third-party software included in this distribution. You may not use this file except in
 # compliance with the License.
@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-""" Concentration Library
+""" ConcentrationMetrics
 
 .. moduleauthor: Open Risk
 
@@ -21,11 +21,14 @@
 
 import numpy as np
 import pandas as pd
+import os
 
 # ADJUST THIS TO REFLECT YOUR OWN ENVIRONMENT!
 # Set the full path including trailing slash
-source_path = './'
-dataset_path = source_path + "datasets/"
+package_name = 'transitionMatrix'
+module_path = os.path.dirname(__file__)
+source_path = module_path
+dataset_path = source_path + "/datasets/"
 
 
 class Index(object):

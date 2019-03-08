@@ -1,6 +1,6 @@
 Todo List
 ==================
-The Concentration Library is an ongoing project. Several significant extensions are in the pipeline.
+The concentrationMetrics library is an ongoing project. Several significant extensions are in the pipeline.
 
 Further Concentration / Inequality / Diversity Indexes
 ------------------------------------------------------

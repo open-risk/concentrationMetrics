@@ -2,7 +2,7 @@
 
 # (c) 2015-2017 Open Risk, all rights reserved
 #
-# Concentration Library is licensed under the MIT license a copy of which is included
+# ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
 # third-party software included in this distribution. You may not use this file except in
 # compliance with the License.
@@ -15,7 +15,7 @@
 import numpy as np
 import pandas as pd
 
-import concentration_library as cl
+import concentrationMetrics as cl
 
 myIndex = cl.Index()
 

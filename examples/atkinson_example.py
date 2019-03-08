@@ -2,7 +2,7 @@
 
 # (c) 2015-2017 Open Risk, all rights reserved
 #
-# Concentration Library is licensed under the MIT license a copy of which is included
+# ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
 # third-party software included in this distribution. You may not use this file except in
 # compliance with the License.
@@ -12,10 +12,10 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
-import concentration_library as cl
+import concentrationMetrics as cl
 import pandas as pd
 
-dataset_path = cl.source_path + "datasets/"
+dataset_path = cl.source_path + "/datasets/"
 
 # Comparison with R version in IC2 package on hhbudget dataset
 # Expected Results:

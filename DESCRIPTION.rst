@@ -1,8 +1,8 @@
 ======================
-Concentration Library
+ConcentrationMetrics
 ======================
 
-Concentration Library is an MIT-licensed `Python <http://www.python.org>`_
+ConcentrationMetrics is an MIT-licensed `Python <http://www.python.org>`_
 package aimed at becoming a reference implementation of indicators used in the analysis of concentration, inequality and diversity measures
 
 Overview of Main Features
@@ -22,7 +22,7 @@ portfolio data:
 
 .. code:: python
 
-    import concentration_library as cl
+    import concentrationMetrics as cl
     import numpy
     # Create some data
     a = 1.7
@@ -38,7 +38,7 @@ Computing the confidence interval
 
 .. code:: python
 
-    import concentration_library as cl
+    import concentrationMetrics as cl
     import numpy
     # Create some data
     a = 1.7
@@ -54,13 +54,13 @@ Many more examples in the examples directory
 File structure
 ==============
 
-* concentration\_library.py The library module
-* datasets/ Contains a variety of datasets useful for getting started with the Concentration Library
+* concentrationMetrics.py The library module
+* datasets/ Contains a variety of datasets useful for getting started with the ConcentrationMetrics
 * examples/ Variety of usage examples
 * docs/ Sphinx generated documentation
 * tests/ testing the implementation
 
-All indexes are currently implemented in concentration\_library.py as methods of the Index object
+All indexes are currently implemented in concentrationMetrics.py as methods of the Index object
 
 Dependencies
 ============

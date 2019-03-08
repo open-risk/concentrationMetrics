@@ -19,11 +19,11 @@ run the test suite
 
 import unittest
 import sys
-from concentration_library import source_path
+from concentrationMetrics import source_path
 sys.path.append(source_path)
 
 loader = unittest.TestLoader()
-start_dir = source_path + 'tests'
+start_dir = source_path + '/tests'
 suite = loader.discover(start_dir)
 
 runner = unittest.TextTestRunner()

@@ -2,7 +2,7 @@
 
 # (c) 2019 Open Risk, all rights reserved
 #
-# Concentration Library is licensed under the MIT license a copy of which is included
+# ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
 # third-party software included in this distribution. You may not use this file except in
 # compliance with the License.
@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import numpy as np
-import concentration_library as cl
+import concentrationMetrics as cl
 import matplotlib.pyplot as plt
 
 dataset_path = cl.source_path + "datasets/"

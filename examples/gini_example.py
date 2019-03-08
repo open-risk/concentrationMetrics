@@ -1,4 +1,4 @@
-import concentration_library as cl
+import concentrationMetrics as cl
 import numpy as np
 
 myIndex = cl.Index()
