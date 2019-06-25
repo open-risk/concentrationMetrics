@@ -17,7 +17,15 @@ Key Information
 * License: MIT
 * Mathematical Documentation: Open Risk Manual, <https://www.openriskmanual.org/wiki/Category:Concentration_Index>
 * Code Documentation: [Read The Docs](https://concentrationmetrics.readthedocs.io/en/latest/index.html)
-* Development website: <https://github.com/open-risk/concentrationMetrics>
+* Development website: [Github](https://github.com/open-risk/concentrationMetrics)
+* General Discussions: [Gitter](https://gitter.im/open-risk/Lobby)
+* Package Specific Chat: [Gitter](https://gitter.im/open-risk/concentrationMetrics)
+
+Support and Training
+=========================
+
+The Open Risk Academy has free courses demonstrating the use of the library: [Open Risk Academy](https://www.openriskacademy.com)
+
 
 List of Implemented Indexes
 ===============================
