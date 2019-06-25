@@ -21,6 +21,10 @@ Key Information
 * General Discussions: [Gitter](https://gitter.im/open-risk/Lobby)
 * Package Specific Chat: [Gitter](https://gitter.im/open-risk/concentrationMetrics)
 
+
+**NB: concentrationMetrics is still in active development. If you encounter issues please raise them in our
+github repository**
+
 Support and Training
 =========================
 
