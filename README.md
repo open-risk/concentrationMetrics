@@ -1,4 +1,5 @@
 [![Gitter](https://badges.gitter.im/open-risk/concentrationMetrics.svg)](https://gitter.im/open-risk/concentrationMetrics?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Documentation Status](https://readthedocs.org/projects/concentrationMetrics/badge/?version=latest)](https://concentrationMetrics.readthedocs.io/en/latest/?badge=latest)
 
 Intro
 ==========================
@@ -20,8 +21,8 @@ Key Information
 * Mathematical Documentation: Open Risk Manual, <https://www.openriskmanual.org/wiki/Category:Concentration_Index>
 * Code Documentation: [Read The Docs](https://concentrationmetrics.readthedocs.io/en/latest/index.html)
 * Development website: [Github](https://github.com/open-risk/concentrationMetrics)
-* General Discussions: [Gitter](https://gitter.im/open-risk/Lobby)
-* Package Specific Chat: [Gitter](https://gitter.im/open-risk/concentrationMetrics)
+* General Discussions: [Gitter Lobby](https://gitter.im/open-risk/Lobby)
+* Package Specific Chat: [Gitter Project](https://gitter.im/open-risk/concentrationMetrics)
 
 
 **NB: concentrationMetrics is still in active development. If you encounter issues please raise them in our
