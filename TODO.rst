@@ -11,7 +11,13 @@ Further Spatial / Multi-Group Concentrations Indexes
 --------------------------------------
 
 - Further indexes of the Ellison-Glaeser family
-- Distance based measures
+
+Distance based measures
+------------------------
+- G-statistics, G*-statistics
+- Moran's I
+- Geary's C
+- Greenwood statistic
 
 
 Implementation / Functionality

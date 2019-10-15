@@ -1,3 +1,6 @@
+[![Gitter](https://badges.gitter.im/open-risk/concentrationMetrics.svg)](https://gitter.im/open-risk/concentrationMetrics?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Documentation Status](https://readthedocs.org/projects/concentrationMetrics/badge/?version=latest)](https://concentrationMetrics.readthedocs.io/en/latest/?badge=latest)
+
 Intro
 ==========================
 concentrationMetrics is a python library for the computation of various concentration, diversification and inequality indices. The library implements the computation of all well known indexes of inequality and concentration. 
@@ -17,7 +20,19 @@ Key Information
 * License: MIT
 * Mathematical Documentation: Open Risk Manual, <https://www.openriskmanual.org/wiki/Category:Concentration_Index>
 * Code Documentation: [Read The Docs](https://concentrationmetrics.readthedocs.io/en/latest/index.html)
-* Development website: <https://github.com/open-risk/concentrationMetrics>
+* Development website: [Github](https://github.com/open-risk/concentrationMetrics)
+* General Discussions: [Gitter Lobby](https://gitter.im/open-risk/Lobby)
+* Package Specific Chat: [Gitter Project](https://gitter.im/open-risk/concentrationMetrics)
+
+
+**NB: concentrationMetrics is still in active development. If you encounter issues please raise them in our
+github repository**
+
+Support and Training
+=========================
+
+The Open Risk Academy has free courses demonstrating the use of the library: [Open Risk Academy](https://www.openriskacademy.com)
+
 
 List of Implemented Indexes
 ===============================
