@@ -3,7 +3,8 @@ ConcentrationMetrics
 ======================
 
 ConcentrationMetrics is an MIT-licensed `Python <http://www.python.org>`_
-package aimed at becoming a reference implementation of indicators used in the analysis of concentration, inequality and diversity measures
+package aimed at becoming a reference implementation of indicators used in the analysis of concentration,
+inequality and diversity measures
 
 Overview of Main Features
 =========================
