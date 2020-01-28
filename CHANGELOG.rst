@@ -1,6 +1,10 @@
 ConcentrationMetrics Change Log
 ================================
 
+v0.5 (xx-xx-xxxx)
+=================
+* Adding functionality to calculate metrics on graph data
+
 v0.4.2 (08-03-2019)
 ===================
 
