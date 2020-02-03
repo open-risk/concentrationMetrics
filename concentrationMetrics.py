@@ -32,7 +32,7 @@ dataset_path = source_path + "/datasets/"
 
 
 class Index(object):
-    """  The concentration index object provides the main interface to the various index calculation
+    """  The concentration index object provides the main interface to the various index calculations
 
 
     """
@@ -388,7 +388,7 @@ class Index(object):
         return eg_indexes
 
     def compute(self, data, *args, ci=None, samples=None, index='hhi'):
-        # Compute bootstraped confidence interval estimates
+        # Compute bootstrapped confidence interval estimates
 
         # Actual value of the index
         value = self.callMethod(index, data, *args)
