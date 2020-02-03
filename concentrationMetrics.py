@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017-2019 Open Risk, all rights reserved
+# (c) 2017-2020 Open Risk, all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-""" ConcentrationMetrics
+"""ConcentrationMetrics.
 
 .. moduleauthor: Open Risk
 
@@ -25,14 +25,14 @@ import os
 
 # ADJUST THIS TO REFLECT YOUR OWN ENVIRONMENT!
 # Set the full path including trailing slash
-package_name = 'transitionMatrix'
+package_name = 'concentrationMetrics'
 module_path = os.path.dirname(__file__)
 source_path = module_path
 dataset_path = source_path + "/datasets/"
 
 
 class Index(object):
-    """  The concentration index object provides the main interface to the various index calculations
+    """The concentration index object provides the main interface to the various index calculations.
 
 
     """
@@ -49,7 +49,7 @@ class Index(object):
         return np.sum(data)
 
     def get_weights(self, data):
-        """ Calculate data weights
+        """Calculate data weights.
 
         :param data: Positive data of weights
         :type data: numpy array
@@ -74,7 +74,7 @@ class Index(object):
             return np.true_divide(data, ts)
 
     def cr(self, data, n):
-        """ Calculate the Concentration Ratio
+        """Calculate the Concentration Ratio.
 
         :param data: Positive data
         :type data: numpy array
@@ -93,7 +93,7 @@ class Index(object):
             return weights[:n].sum()
 
     def berger_parker(self, data):
-        """ Calculate the Berger Parker Index (special version of the Concentration Ratio)
+        """Calculate the Berger Parker Index (special version of the Concentration Ratio).
 
         :param data: Positive data
         :type data: numpy array
@@ -104,7 +104,7 @@ class Index(object):
         return self.cr(data, 1)
 
     def hhi(self, data, normalized=True, ci=None, samples=None):
-        """ Calculate the Herfindahl-Hirschman index
+        """Calculate the Herfindahl-Hirschman index.
 
         :param data: Positive data
         :type data: numpy array
@@ -126,7 +126,7 @@ class Index(object):
                 return h
 
     def hk(self, data, a):
-        """ Calculate the inverted Hannah Kay index
+        """Calculate the inverted Hannah Kay index.
 
         :param data: Positive data
         :type data: numpy array
@@ -153,7 +153,7 @@ class Index(object):
                 return h2
 
     def hoover(self, data):
-        """ Calculate the Hoover index
+        """Calculate the Hoover index.
 
         :param data: Positive data
         :type data: numpy array
@@ -170,7 +170,7 @@ class Index(object):
             return 0.5 * np.absolute(weights - 1.0 / n).sum()
 
     def gini(self, data):
-        """ Calculate the Gini index
+        """Calculate the Gini index.
 
         :param data: Positive data
         :type data: numpy array
@@ -190,7 +190,7 @@ class Index(object):
             return 1.0 + (1.0 - 2.0 * np.multiply(i, weights).sum()) / n
 
     def shannon(self, data, normalized=True):
-        """ Calculate the Shannon entropy index
+        """Calculate the Shannon entropy index.
 
         :param data: Positive data
         :type data: numpy array
@@ -213,7 +213,7 @@ class Index(object):
                 return h
 
     def atkinson(self, data, epsilon):
-        """ Calculate the Atkinson inequality index
+        """Calculate the Atkinson inequality index.
 
         :param data: Positive data
         :type data: numpy array
@@ -245,7 +245,7 @@ class Index(object):
                 return 1 - n2 * h2
 
     def gei(self, data, alpha):
-        """ Calculate the Generalized Entropy Index
+        """Calculate the Generalized Entropy Index.
 
         :param data: Positive data
         :type data: numpy array
@@ -278,7 +278,7 @@ class Index(object):
             return index
 
     def theil(self, data):
-        """ Calculate the Theil Index (Generalized Entropy Index for a=1)
+        """Calculate the Theil Index (Generalized Entropy Index for a=1).
 
         :param data: Positive data
         :type data: numpy array
@@ -290,7 +290,7 @@ class Index(object):
         return self.gei(weights, 1)
 
     def kolm(self, data, alpha):
-        """ Calculate the Kolm index
+        """Calculate the Kolm index.
 
         :param data: Positive data
         :type data: numpy array
@@ -310,7 +310,7 @@ class Index(object):
             return mu + (np.log(h) - np.log(n)) / alpha
 
     def ellison_glaeser(self, data, na, ni):
-        """ Ellison and Glaeser (1997) indexes of industrial concentration.
+        """Ellison and Glaeser (1997) indexes of industrial concentration.
 
         Implemented as in equation (5) of original reference
         Input data are a data frame of three columns of the following type:
@@ -388,7 +388,15 @@ class Index(object):
         return eg_indexes
 
     def compute(self, data, *args, ci=None, samples=None, index='hhi'):
-        # Compute bootstrapped confidence interval estimates
+        """Compute bootstraped confidence interval estimates.
+
+        :param data:
+        :param args:
+        :param ci:
+        :param samples:
+        :param index:
+        :return:
+        """
 
         # Actual value of the index
         value = self.callMethod(index, data, *args)

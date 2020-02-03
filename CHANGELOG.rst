@@ -6,14 +6,17 @@ v0.5.0 (16-10-2019)
 * Added first set of spatial concentration indexes
 * Added first set of network concentration indexes
 * Added methods for semantic self-documentation of models
+* Adding functionality to calculate metrics on graph data
 
 v0.4.2 (08-03-2019)
 ===================
+
 * Renamed library to concentrationMetrics to emphasize the nature of the library and follow the naming conventions of other Open Risk projects (transitionMatrix, correlationMatrix etc)
 * Added readthedocs documentation
 
 v0.4.1 (18-02-2019)
 ===================
+
 * Provide confidence intervals via bootstraping
 * Improved test documentation
 * Fixed documentation links

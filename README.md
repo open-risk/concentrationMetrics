@@ -16,9 +16,9 @@ You can use concentrationMetrics to
 Key Information
 ================
 
-* Author: Open Risk, <https://www.openriskmanagement.com>
+* Author: [Open Risk](<https://www.openriskmanagement.com>)
 * License: MIT
-* Mathematical Documentation: Open Risk Manual, <https://www.openriskmanual.org/wiki/Category:Concentration_Index>
+* Mathematical Documentation: [Open Risk Manual](<https://www.openriskmanual.org/wiki/Category:Concentration_Index>)
 * Code Documentation: [Read The Docs](https://concentrationmetrics.readthedocs.io/en/latest/index.html)
 * Development website: [Github](https://github.com/open-risk/concentrationMetrics)
 * General Discussions: [Gitter Lobby](https://gitter.im/open-risk/Lobby)

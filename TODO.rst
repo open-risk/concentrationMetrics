@@ -19,6 +19,10 @@ Distance based measures
 - Geary's C
 - Greenwood statistic
 
+Graph based measures
+--------------------
+
+
 
 Implementation / Functionality
 ------------------------------
