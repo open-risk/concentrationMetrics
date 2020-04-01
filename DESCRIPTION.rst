@@ -1,10 +1,10 @@
-======================
+====================
 ConcentrationMetrics
-======================
+====================
 
 ConcentrationMetrics is an MIT-licensed `Python <http://www.python.org>`_
 package aimed at becoming a reference implementation of indicators used in the analysis of concentration,
-inequality and diversity measures
+inequality and diversity measures.
 
 Overview of Main Features
 =========================
@@ -18,54 +18,46 @@ Overview of Main Features
 Usage
 ===============================
 
-Using the library is quite straightforward. For example calculating the Gini and the HHI indexes on randomly generated
-portfolio data:
+Using the library is quite straightforward. For example calculating the Gini and the HHI indexes
+on randomly generated portfolio data:
 
 .. code:: python
 
-    import concentrationMetrics as cl
-    import numpy
+    import numpy as np
+    from concentrationMetrics import Index
+    
     # Create some data
     a = 1.7
     portfolio = np.random.zipf(a, 100)
+
     # Calculate some indexes
-    myIndex = cl.Index()
-    hhi = myIndex.hhi(portfolio)
-    gini = myIndex.gini(portfolio)
+    indices = Index()
+    hhi = indices.hhi(portfolio)
+    gini = indices.gini(portfolio)
+
+    # Compute the confidence interval
+    lower_bound, val, upper_bound = indices.compute(portfolio, index='hhi', ci=0.95, samples=10000)
 
 
-Computing the confidence interval
-
-
-.. code:: python
-
-    import concentrationMetrics as cl
-    import numpy
-    # Create some data
-    a = 1.7
-    portfolio = np.random.zipf(a, 100)
-    # Calculate some indexes
-    myIndex = cl.Index()
-    lower_bound, value, upper_bound = myIndex.compute(portfolio, index='hhi', ci=0.95, samples=10000)
-
-
-Many more examples in the examples directory
+Many more examples in the examples directory.
 
 
 File structure
 ==============
 
-* concentrationMetrics.py The library module
-* datasets/ Contains a variety of datasets useful for getting started with the ConcentrationMetrics
-* examples/ Variety of usage examples
-* docs/ Sphinx generated documentation
-* tests/ testing the implementation
+* `concentrationMetrics.py` The library module
+* `datasets/` Contains a variety of datasets useful for getting started with the ConcentrationMetrics
+* `examples/` Variety of usage examples
+* `docs/` Sphinx generated documentation
+* `tests/` testing the implementation
 
-All indexes are currently implemented in concentrationMetrics.py as methods of the Index object
+All indexes are currently implemented in concentrationMetrics.py as methods of the Index object.
 
 Dependencies
 ============
 
+-   matplotlib
+-   networkx
 -   numpy
 -   pandas
 -   scipy
@@ -73,7 +65,7 @@ Dependencies
 Datasets
 ========
 
-Version 0.3.1 includes two real datasets currently used primarily for testing and comparison with R implementations
+Version 0.3.1 includes two real datasets currently used primarily for testing and comparison with R implementations:
 
 -   hhbudget.csv
 -   Ilocos.csv
