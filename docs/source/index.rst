@@ -7,14 +7,18 @@ Welcome to concentrationMetrics's documentation!
 =================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    description
-   changelog
+   data_preparation
    modules
+   changelog
+   todo
+   roadmap
 
-Indices and tables
+
+Indexes and tables
 ==================
 
 * :ref:`genindex`

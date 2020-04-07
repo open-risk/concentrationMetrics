@@ -22,14 +22,14 @@ Purpose: Demonstrate usage of the ConcentrationMetrics
 import matplotlib.pyplot as plt
 import numpy as np
 
-import concentrationMetrics as cl
+import concentrationMetrics as cm
 
 if __name__ == "__main__":
 
     # generate portfolio data (list)
     # for some realism we use the Zipf power law
 
-    myIndex = cl.Index()
+    myIndex = cm.Index()
 
     a = 1.7  # zipf parameter
     x = []

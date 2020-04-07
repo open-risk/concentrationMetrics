@@ -1,16 +1,15 @@
-====================
-ConcentrationMetrics
-====================
+The concentrationMetrics Library
+================================
 
-ConcentrationMetrics is an MIT-licensed `Python <http://www.python.org>`_
-package aimed at becoming a reference implementation of indicators used in the analysis of concentration,
-inequality and diversity measures.
+ConcentrationMetrics is an MIT-licensed `Python <http://www.python.org>`_ package aimed at becoming a reference implementation
+of indexes used in the analysis of concentration, inequality and diversity measures.
 
 Overview of Main Features
 =========================
 
 * exhaustive collection of concentration and inequality indexes and metrics
 * supports file input/output in both json and csv formats
+* detailed mathematical documentation
 * computation of confidence intervals via bootstraping
 * visualization using matplotlib
 
@@ -30,22 +29,28 @@ on randomly generated portfolio data:
     a = 1.7
     portfolio = np.random.zipf(a, 100)
 
-    # Calculate some indexes
+    # Calculate the desired indexes
     indices = Index()
     hhi = indices.hhi(portfolio)
     gini = indices.gini(portfolio)
 
-    # Compute the confidence interval
+    # Compute the confidence interval around the HHI index value
     lower_bound, val, upper_bound = indices.compute(portfolio, index='hhi', ci=0.95, samples=10000)
 
+    # Calculate indexes on a dataframe
+    BCI = pd.read_json(dataset_path + "BCI.json")
+    y = BCI.values
+    myGroupIndex = cm.Index(data=y, index='simpson')
+    myGroupIndex.print(6)
 
-Many more examples in the examples directory.
+
+Many more examples and tests are available in the examples and test directories.
 
 
 File structure
 ==============
 
-* `concentrationMetrics.py` The library module
+* `concentrationMetrics/model.py` The library module
 * `datasets/` Contains a variety of datasets useful for getting started with the ConcentrationMetrics
 * `examples/` Variety of usage examples
 * `docs/` Sphinx generated documentation
@@ -55,27 +60,27 @@ All indexes are currently implemented in concentrationMetrics.py as methods of t
 
 Dependencies
 ============
+The main dependencies are the standard python datascience stack and networkx. The full list is in requirements.txt
 
--   matplotlib
--   networkx
--   numpy
--   pandas
--   scipy
+- matplotlib
+- numpy
+- pandas
+- scipy
+- networkx
 
 Datasets
 ========
+Version 0.5.0 includes datasets used primarily for testing and comparison with R implementations:
 
-Version 0.3.1 includes two real datasets currently used primarily for testing and comparison with R implementations:
-
--   hhbudget.csv
--   Ilocos.csv
+- hhbudget.csv
+- Ilocos.csv
+- BCI.json
 
 Testing
 =======
 
 Run python test.py
 
-Comparison with R implementations
+Comparison with R packages
 =================================
-
 -   atkinson\_test.py compares the Atkinson function with the IC2/Atk function

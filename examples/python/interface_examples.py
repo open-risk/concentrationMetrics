@@ -15,20 +15,20 @@
 import numpy as np
 import pandas as pd
 
-import concentrationMetrics as cl
+import concentrationMetrics as cm
 
-myIndex = cl.Index()
+myIndex = cm.Index()
 
 # Illustration of the various data formats that can be used
 # Conversion to numpy array / matrices is required prior to calculation
 
 # Reading data from a csv file via pandas
-hhbudgets = pd.read_csv(cl.dataset_path + "hhbudgets.csv")
+hhbudgets = pd.read_csv(cm.dataset_path + "hhbudgets.csv")
 
 # Only the first column will be interpreted as data
-y1a = hhbudgets.as_matrix(columns=["ingreso"])
+y1a = hhbudgets["ingreso"]
 print(myIndex.atkinson(data=y1a, epsilon=1))
-y1b = hhbudgets.as_matrix(columns=["ingreso", "transporte"])
+y1b = hhbudgets[["ingreso", "transporte"]].values
 print(myIndex.atkinson(y1b, 1))
 
 # Using data in a numpy array

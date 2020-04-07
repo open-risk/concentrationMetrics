@@ -12,10 +12,10 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
-import concentrationMetrics as cl
+import concentrationMetrics as cm
 import pandas as pd
 
-dataset_path = cl.source_path + "/datasets/"
+dataset_path = cm.source_path + "/datasets/"
 
 # Comparison with R version in IC2 package on hhbudget dataset
 # Expected Results:
@@ -26,9 +26,9 @@ dataset_path = cl.source_path + "/datasets/"
 # Epsilon 4: 0.6856425
 
 hhbudgets = pd.read_csv(dataset_path + "hhbudgets.csv")
-y = hhbudgets.as_matrix(columns=["ingreso"])
+y = hhbudgets["ingreso"].values
 
-myIndex =cl.Index()
+myIndex = cm.Index()
 
 # print(cl.atkinson(y, 0))
 print(myIndex.atkinson(y, 1))

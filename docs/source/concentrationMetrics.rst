@@ -1,7 +1,7 @@
 concentrationMetrics module
 =============================
 
-.. automodule:: concentrationMetrics
+.. automodule:: concentrationMetrics.model
     :members:
     :undoc-members:
     :show-inheritance:

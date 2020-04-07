@@ -13,10 +13,10 @@
 # limitations under the License.
 
 import numpy as np
-import concentrationMetrics as cl
+import concentrationMetrics as cm
 import matplotlib.pyplot as plt
 
-dataset_path = cl.source_path + "datasets/"
+dataset_path = cm.source_path + "datasets/"
 
 # Bootstraped confidence intervals
 
@@ -30,7 +30,7 @@ dataset_path = cl.source_path + "datasets/"
 portfolio = np.random.normal(loc=10, scale=1, size=100)
 
 # Simple calculation
-myIndex = cl.Index()
+myIndex = cm.Index()
 value = myIndex.compute(portfolio, index='hhi')
 print('New API: ', value)
 print("HHI Value ", myIndex.hhi(portfolio))

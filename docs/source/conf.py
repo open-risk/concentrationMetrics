@@ -19,14 +19,16 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 # -- Project information -----------------------------------------------------
 
+__version__ = '0.5.0'
+
 project = 'concentrationMetrics'
-copyright = '2018-2019, Open Risk'
+copyright = '2018-2020, Open Risk'
 author = 'Open Risk'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.4.2'
+release = __version__
 
 
 # -- General configuration ---------------------------------------------------

@@ -25,7 +25,7 @@ import unittest
 import numpy as np
 import pandas as pd
 
-import concentrationMetrics as cl
+import concentrationMetrics as cm
 
 ERROR_MARGIN = 1e-10
 
@@ -46,7 +46,7 @@ class TestConcentrationLib(unittest.TestCase):
         Atkinson a=0.5:   0.1796591
         Atkinson a=1:     0.3518251
         """
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         x = np.array([541, 1463, 2445, 3438, 4437, 5401, 6392, 8304, 11904, 22261])
         ERROR_MARGIN = 1e-5
         print(self.shortDescription())
@@ -54,7 +54,7 @@ class TestConcentrationLib(unittest.TestCase):
         self.assertTrue(abs(myIndex.atkinson(x, 1.0) - 0.3518251) < ERROR_MARGIN)
 
     def test_atkinson_uniform(self):
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         vector = np.ones(1000000)
         print(self.shortDescription())
         self.assertTrue(abs(myIndex.atkinson(vector, 0.5) - 0.0) < ERROR_MARGIN)
@@ -62,7 +62,7 @@ class TestConcentrationLib(unittest.TestCase):
         self.assertTrue(abs(myIndex.atkinson(vector, 2) - 0.0) < ERROR_MARGIN)
 
     def test_atkinson(self):
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         vector = np.zeros(1000)
         vector[0] = 1
         print(self.shortDescription())
@@ -73,7 +73,7 @@ class TestConcentrationLib(unittest.TestCase):
         Testing Concentration Ratio
 
         """
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         n = 1000
         vector = np.ones(n)
         print(self.shortDescription())
@@ -84,7 +84,7 @@ class TestConcentrationLib(unittest.TestCase):
         Testing Berger-Parker
 
         """
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         n = 1000
         vector = np.ones(n)
         print(self.shortDescription())
@@ -95,7 +95,7 @@ class TestConcentrationLib(unittest.TestCase):
         Testing Herfindahl-Hirschman
 
         """
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         vector = np.ones(10)
         print(self.shortDescription())
         self.assertTrue(abs(myIndex.hhi(vector) - 0.0) < ERROR_MARGIN)
@@ -105,7 +105,7 @@ class TestConcentrationLib(unittest.TestCase):
         Testing Gini
 
         """
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         vector = np.ones(10)
         print(self.shortDescription())
         self.assertTrue(abs(myIndex.gini(vector) - 0.0) < ERROR_MARGIN)
@@ -115,17 +115,17 @@ class TestConcentrationLib(unittest.TestCase):
         Testing Shannon
 
         """
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         vector = np.ones(10)
         print(self.shortDescription())
-        self.assertTrue(abs(myIndex.shannon(vector) - 0.0) < ERROR_MARGIN)
+        self.assertTrue(abs(myIndex.shannon(vector, normalized=True) - 0.0) < ERROR_MARGIN)
 
     def test_hk(self):
         """
         Testing Hannah-Kay
 
         """
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         n = 10
         vector = np.ones(n)
         print(self.shortDescription())
@@ -146,7 +146,7 @@ class TestConfidenceIntervals(unittest.TestCase):
         Testing that all implemented indexes have monotonic confidence intervals
 
         """
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         portfolio = np.random.normal(loc=10, scale=1, size=100)
 
         methods = [['cr', 5], ['berger_parker'], ['hhi'], ['hk', 3],
@@ -177,7 +177,7 @@ class TestEllisonGlaeser(unittest.TestCase):
         Testing EG Single Industry
 
         """
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         # Number of observations
         N = 10
         # Number of areas
@@ -201,7 +201,7 @@ class TestEllisonGlaeser(unittest.TestCase):
         Testing EG Five Uniform Industries
 
         """
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         # Number of observations
         N = 50
         # Number of areas
@@ -228,7 +228,7 @@ class TestEllisonGlaeser(unittest.TestCase):
         Testing EG Maximum Concentration
 
         """
-        myIndex = cl.Index()
+        myIndex = cm.Index()
         # Number of observations
         N = 400000
         # Number of areas

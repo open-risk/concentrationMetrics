@@ -12,29 +12,19 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
+import concentrationMetrics as cm
 import numpy as np
-import pandas as pd
 
-import concentrationMetrics as cl
+myIndex = cm.Index()
+x = np.array([541, 1463, 2445, 3438, 4437, 5401, 6392, 8304, 11904, 22261])
 
-myIndex = cl.Index()
 
-# RANDOM PARETO EXPOSURES / UNIFORM INDUSTRIES)
-# Number of observations
-N = 100000
-# Number of areas
-Na = 5
-# Number of industries
-Ni = 3
-# Pareto exposure distribution
-a, m = 3., 2.  # shape and mode
-exposure = (np.random.pareto(a, N) + 1) * m
-# Uniform area distribution (276 NUTS 2 Regions)
-area = np.random.randint(0, Na, N)
-# Uniform industry distribution (21 NACE categories)
-industry = np.random.randint(0, Ni, N)
+# Comparison with R version in ineq package
+# Results
+# Gini:             0.4620911
+# Atkinson a=0.5:   0.1796591
+# Atkinson a=1:     0.3518251
 
-# create dataframe
-d = {'Exposure': exposure, 'Area': area, 'Industry': industry}
-data = pd.DataFrame(data=d)
-print(myIndex.ellison_glaeser(data, Na, Ni))
+print(myIndex.gini(x))
+print(myIndex.atkinson(x, 0.5))
+print(myIndex.atkinson(x, 1.0))

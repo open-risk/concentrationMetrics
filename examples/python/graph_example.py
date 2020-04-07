@@ -12,7 +12,7 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
-import concentrationMetrics as cl
+import concentrationMetrics as cm
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -46,7 +46,7 @@ for i in range(n):
 print(attrs)
 nx.set_node_attributes(G, attrs)
 
-dataset_path = cl.source_path + "/datasets/"
+dataset_path = cm.source_path + "/datasets/"
 nx.write_yaml(G, dataset_path + "star.yml")
 
 # Load a graph

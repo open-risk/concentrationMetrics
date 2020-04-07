@@ -1,4 +1,4 @@
-concentrationMetrics Modules
+API
 ============================
 
 .. toctree::

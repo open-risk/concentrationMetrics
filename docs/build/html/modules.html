@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>concentrationMetrics Modules &mdash; concentrationMetrics 0.4.2 documentation</title>
+  <title>API &mdash; concentrationMetrics 0.5.0 documentation</title>
   
 
   
@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="concentrationMetrics module" href="concentrationMetrics.html" />
-    <link rel="prev" title="ConcentrationMetrics Change Log" href="changelog.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+    <link rel="prev" title="Data Preparation" href="data_preparation.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -80,18 +82,22 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="description.html">ConcentrationMetrics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html">ConcentrationMetrics Change Log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#v0-4-2-08-03-2019">v0.4.2 (08-03-2019)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#v0-4-1-18-02-2019">v0.4.1 (18-02-2019)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#v0-4-17-08-2018">v0.4 (17-08-2018)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#v0-3-1-09-05-2018">v0.3.1 (09-05-2018)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#v0-3-0-27-12-2017">v0.3.0 (27-12-2017)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#v0-2-0-23-11-2016">v0.2.0 (23-11-2016)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">concentrationMetrics Modules</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="description.html">The concentrationMetrics Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html#overview-of-main-features">Overview of Main Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html#file-structure">File structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html#dependencies">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html#datasets">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html#comparison-with-r-packages">Comparison with R packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_preparation.html">Data Preparation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="concentrationMetrics.html">concentrationMetrics module</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
 </ul>
 
             
@@ -137,7 +143,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>concentrationMetrics Modules</li>
+      <li>API</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -156,8 +162,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="concentrationmetrics-modules">
-<h1>concentrationMetrics Modules<a class="headerlink" href="#concentrationmetrics-modules" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="api">
+<h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="concentrationMetrics.html">concentrationMetrics module</a></li>
@@ -176,7 +182,7 @@
         <a href="concentrationMetrics.html" class="btn btn-neutral float-right" title="concentrationMetrics module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="changelog.html" class="btn btn-neutral" title="ConcentrationMetrics Change Log" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="data_preparation.html" class="btn btn-neutral float-left" title="Data Preparation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -185,7 +191,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018-2019, Open Risk
+        &copy; Copyright 2018-2020, Open Risk
 
     </p>
   </div>
@@ -202,35 +208,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'0.4.2',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

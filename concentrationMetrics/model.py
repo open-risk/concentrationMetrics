@@ -13,15 +13,17 @@
 # limitations under the License.
 
 
-"""ConcentrationMetrics.
+""" This module provides the key concentrationMetrics objects
+
+* Index_ implements the main index calculation functionality
 
 .. moduleauthor: Open Risk
-
 """
+
+import os
 
 import numpy as np
 import pandas as pd
-import os
 
 # ADJUST THIS TO REFLECT YOUR OWN ENVIRONMENT!
 # Set the full path including trailing slash
@@ -32,16 +34,36 @@ dataset_path = source_path + "/datasets/"
 
 
 class Index(object):
-    """The concentration index object provides the main interface to the various index calculations.
+    """The concentration _`Index` object provides the main interface to the various index calculations.
 
 
     """
 
-    def __init__(self):
-        pass
+    def __init__(self, data=None, index=None, *args):
+        # we only do something if the constructor has been passed some data
+        if data is not None:
+            self.data = data
+            self.index = index
+            self.arguments = args
+            self.results = None
+            results = []
+            for i in range(data.shape[0]):
+                calc = self.call_method(index, data[i, :], *args)
+                results.append(calc)
+            self.results = results
+
+    def print(self, cols=None):
+        print(self.index)
+        print('--------')
+        if cols is None:
+            for i in self.results:
+                print(i)
+        else:
+            for i in self.results[:cols]:
+                print(i)
 
     # call index by name
-    def callMethod(self, name, data, *args):
+    def call_method(self, name, data, *args):
         return getattr(self, name)(data, *args)
 
     # calculate total size
@@ -55,6 +77,8 @@ class Index(object):
         :type data: numpy array
         :return: Vector weights
         :raise: TypeError if negative total size
+
+        .. _get_weights:
         """
 
         try:
@@ -62,14 +86,13 @@ class Index(object):
             if len(data.shape) > 1:
                 data = data[:, 0]
             # print(data)
-        except:
+        except Exception:
             print("Data is not in numpy format")
             exit()
 
         ts = self.total_size(data)
         if ts <= 0:
             raise TypeError('Input data vector must have positive values')
-            exit()
         else:
             return np.true_divide(data, ts)
 
@@ -106,6 +129,8 @@ class Index(object):
     def hhi(self, data, normalized=True, ci=None, samples=None):
         """Calculate the Herfindahl-Hirschman index.
 
+        :param normalized:
+        :type normalized: bool
         :param data: Positive data
         :type data: numpy array
         :return: HHI (Float)
@@ -124,6 +149,30 @@ class Index(object):
                 return (h - 1.0 / n) / (1.0 - 1.0 / n)
             else:
                 return h
+
+    def simpson(self, data):
+        """Calculate the Simpson index.
+
+        :param data: Positive data
+        :type data: numpy array
+        :return: Simpson (Float)
+
+        `Open Risk Manual Entry for Simpson Index <https://www.openriskmanual.org/wiki/Simpson_Index>`_
+        """
+        # Based on the HHI calculation
+        return 1.0 - self.hhi(data, normalized=False, ci=None, samples=None)
+
+    def invsimpson(self, data):
+        """Calculate the Inverse Simpson index.
+
+        :param data: Positive data
+        :type data: numpy array
+        :return: Inverse Simpson (Float)
+
+        `Open Risk Manual Entry for Inverse Simpson Index <https://www.openriskmanual.org/wiki/Inverse_Simpson_Index>`_
+        """
+        # Based on the HHI calculation
+        return 1.0 / self.hhi(data, normalized=False, ci=None, samples=None)
 
     def hk(self, data, a):
         """Calculate the inverted Hannah Kay index.
@@ -189,9 +238,11 @@ class Index(object):
             i = np.arange(1, n + 1)
             return 1.0 + (1.0 - 2.0 * np.multiply(i, weights).sum()) / n
 
-    def shannon(self, data, normalized=True):
+    def shannon(self, data, normalized=False):
         """Calculate the Shannon entropy index.
 
+        :param normalized:
+        :type normalized: bool
         :param data: Positive data
         :type data: numpy array
         :return: Shannon entropy (Float)
@@ -312,10 +363,15 @@ class Index(object):
     def ellison_glaeser(self, data, na, ni):
         """Ellison and Glaeser (1997) indexes of industrial concentration.
 
-        Implemented as in equation (5) of original reference
-        Input data are a data frame of three columns of the following type:
-        Exposure    Area        Industry
-        Float       Categorical Categorical
+        .. note:: Implemented as in equation (5) of original reference
+
+        .. note:: Input data are a data frame of three columns of the following type:
+
+        +-----------+------------+------------+
+        | Exposure  | Area       |   Industry |
+        +-----------+------------+------------+
+        | Float     | Categorical| Categorical|
+        +-----------+------------+------------+
 
         .. note:: The ordering of the columns is important. The index is not symmetric with respect to area and industry factors
 
@@ -365,7 +421,7 @@ class Index(object):
             hhi_i.append(hhi_i_val)
 
             # compute industry/area fraction of industry total
-            # group industy group further by area and sum up
+            # group industry group further by area and sum up
             industry_group = pd.DataFrame(group).groupby('Area').sum()
             # The aggregated area values for this industry
             ig_values = industry_group.values[:, 0]
@@ -399,12 +455,12 @@ class Index(object):
         """
 
         # Actual value of the index
-        value = self.callMethod(index, data, *args)
+        value = self.call_method(index, data, *args)
         if ci is not None:
             sample_values = []
             for s in range(samples):
                 sample_data = np.random.choice(data, size=len(data), replace=True)
-                sample_values.append(self.callMethod(index, sample_data, *args))
+                sample_values.append(self.call_method(index, sample_data, *args))
 
             values = np.array(sample_values)
             values.sort()
@@ -415,3 +471,8 @@ class Index(object):
             return lower_bound, value, upper_bound
         else:
             return value
+
+    def describe(self, index):
+        # TODO Semantic documentation
+        print(index)
+        return
