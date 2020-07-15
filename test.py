@@ -2,8 +2,8 @@
 
 # (c) 2017-2018 Open Risk, all rights reserved
 #
-# TransitionMatrix is licensed under the Apache 2.0 license a copy of which is included
-# in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
+# concentrationMetrics is licensed under the Apache 2.0 license a copy of which is included
+# in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
 # third-party software included in this distribution. You may not use this file except in
 # compliance with the License.
 #

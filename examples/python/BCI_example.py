@@ -3,7 +3,7 @@
 # (c) 2020 Open Risk, all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
-# in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
+# in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
 # third-party software included in this distribution. You may not use this file except in
 # compliance with the License.
 #

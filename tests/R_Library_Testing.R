@@ -2,8 +2,8 @@
 
 # (c) 2017-2020 Open Risk, all rights reserved
 #
-# ConcentrationMetrics is licensed under the MIT license a copy of which is included
-# in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
+# concentrationMetrics is licensed under the MIT license a copy of which is included
+# in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
 # third-party software included in this distribution. You may not use this file except in
 # compliance with the License.
 #
@@ -37,3 +37,5 @@ H <- diversity(BCI)
 simp <- diversity(BCI, "simpson")
 invsimp <- diversity(BCI, "inv")
 shannon <- diversity(BCI, "shannon")
+
+knitr::kable(head(shannon))

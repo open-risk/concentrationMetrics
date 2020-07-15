@@ -2,8 +2,8 @@
 
 # (c) 2017-2020 Open Risk (https://www.openriskmanagement.com)
 #
-# TransitionMatrix is licensed under the Apache 2.0 license a copy of which is included
-# in the source distribution of TransitionMatrix. This is notwithstanding any licenses of
+# concentrationMetrics is licensed under the Apache 2.0 license a copy of which is included
+# in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
 # third-party software included in this distribution. You may not use this file except in
 # compliance with the License.
 #
@@ -16,11 +16,9 @@
 from codecs import open
 from setuptools import setup
 
-__version__ = '0.5.0'
+__version__ = '0.5.1'
 
 ver = __version__
-
-long_descr = open('DESCRIPTION.rst', 'r', encoding='utf8').read()
 
 setup(
     name='concentrationMetrics',
@@ -32,12 +30,10 @@ setup(
     author='Open Risk',
     author_email='info@openrisk.eu',
     description='A python library for the computation of various concentration, inequality and diversity indices',
-    long_description=long_descr,
     install_requires=[
         'numpy',
         'pandas',
         'scipy',
-        'matplotlib',
         'networkx',
         'pytest'
     ],
@@ -49,8 +45,6 @@ setup(
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
         'Intended Audience :: Financial and Insurance Industry',
-        'Intended Audience :: Ecology',
-        'Intended Audience :: Economics',
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
