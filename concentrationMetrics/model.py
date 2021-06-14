@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017-2020 Open Risk, all rights reserved
+# (c) 2017-2021 Open Risk (www.openriskmanagement.com), all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -73,33 +73,44 @@ class Index(object):
     def get_weights(self, data):
         """Calculate data weights.
 
-        :param data: Positive data of weights
+        :param data: Positive numerical data values
         :type data: numpy array
-        :return: Vector weights
-        :raise: TypeError if negative total size
+        :return: Vector of weights
+        :raise: ValueError if negative values
 
         .. _get_weights:
         """
 
-        try:
-            # select the first column only
-            if len(data.shape) > 1:
-                data = data[:, 0]
-            # print(data)
-        except Exception:
-            print("Data is not in numpy format")
-            exit()
+        # try:
+        #     # select the first column only
+        #     if len(data.shape) > 1:
+        #         data = data[:, 0]
+        #     # print(data)
+        # except TypeError:
+        #     print("Data is not in numpy format")
 
-        ts = self.total_size(data)
-        if ts <= 0:
-            raise TypeError('Input data vector must have positive values')
+        if len(data.shape) > 1:
+            data = data[:, 0]
+
+        # ts = self.total_size(data)
+        # if ts <= 0:
+        #     raise ValueError('Input data vector sum to a positive value')
+        # else:
+        #     return np.true_divide(data, ts)
+
+        if not (data >= 0).all():
+            raise ValueError('Input data vector must have positive values')
         else:
-            return np.true_divide(data, ts)
+            ts = self.total_size(data)
+            if not ts > 0:
+                raise ValueError('Input data vector must have some non-zero values')
+            else:
+                return np.true_divide(data, ts)
 
     def cr(self, data, n):
         """Calculate the Concentration Ratio.
 
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :param n: Integer selecting the top-n entries
         :type n: int
@@ -109,7 +120,7 @@ class Index(object):
         `Open Risk Manual Entry for Concentration Ratio <https://www.openriskmanual.org/wiki/Concentration_Ratio>`_
         """
         if n < 0 or n > data.size:
-            raise TypeError('n must be an positive integer smaller than the data size')
+            raise ValueError('n must be an positive integer smaller than the data size')
         else:
             data = np.array(sorted(data, reverse=True))
             weights = self.get_weights(data)
@@ -118,7 +129,7 @@ class Index(object):
     def berger_parker(self, data):
         """Calculate the Berger Parker Index (special version of the Concentration Ratio).
 
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :return: Berger Parker (Float)
 
@@ -131,7 +142,7 @@ class Index(object):
 
         :param normalized:
         :type normalized: bool
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :return: HHI (Float)
 
@@ -153,7 +164,7 @@ class Index(object):
     def simpson(self, data):
         """Calculate the Simpson index.
 
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :return: Simpson (Float)
 
@@ -165,7 +176,7 @@ class Index(object):
     def invsimpson(self, data):
         """Calculate the Inverse Simpson index.
 
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :return: Inverse Simpson (Float)
 
@@ -177,7 +188,7 @@ class Index(object):
     def hk(self, data, a):
         """Calculate the inverted Hannah Kay index.
 
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :param a: Integer index parameter alpha
         :return: HK (Float)
@@ -190,7 +201,7 @@ class Index(object):
             return 0
         else:
             if a <= 0:
-                raise TypeError('Alpha must be strictly positive')
+                raise ValueError('Alpha must be strictly positive')
             elif a == 1:
                 weights_nz = weights[weights != 0]
                 log_weights = np.log(weights_nz)
@@ -204,7 +215,7 @@ class Index(object):
     def hoover(self, data):
         """Calculate the Hoover index.
 
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :return: Hoover (Float)
 
@@ -218,10 +229,28 @@ class Index(object):
         else:
             return 0.5 * np.absolute(weights - 1.0 / n).sum()
 
+    def hti(self, data):
+        """Calculate the Hall-Tideman index.
+
+        :param data: Positive numerical data
+        :type data: numpy array
+        :return: HTI (Float)
+
+        `Open Risk Manual Entry for Gini Index <https://www.openriskmanual.org/wiki/Hall-Tideman_Index>`_
+        """
+        data = np.array(sorted(data, reverse=True))
+        weights = self.get_weights(data)
+        n = weights.size
+        if n == 0:
+            return 0
+        else:
+            i = np.arange(1, n + 1)
+            return 1.0 / (2.0 * np.multiply(i, weights).sum() - 1.0)
+
     def gini(self, data):
         """Calculate the Gini index.
 
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :return: Gini (Float)
 
@@ -243,7 +272,7 @@ class Index(object):
 
         :param normalized:
         :type normalized: bool
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :return: Shannon entropy (Float)
 
@@ -266,7 +295,7 @@ class Index(object):
     def atkinson(self, data, epsilon):
         """Calculate the Atkinson inequality index.
 
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :param epsilon: Index parameter
         :type epsilon: float
@@ -282,7 +311,7 @@ class Index(object):
             return 0
         else:
             if epsilon <= 0:
-                raise TypeError('Epsilon must be strictly positive (>0.0)')
+                raise ValueError('Epsilon must be strictly positive (>0.0)')
             elif epsilon == 1:
                 weights_nz = weights[weights != 0]
                 n = weights_nz.size
@@ -298,7 +327,7 @@ class Index(object):
     def gei(self, data, alpha):
         """Calculate the Generalized Entropy Index.
 
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :param alpha: Index parameter
         :return: Generalized Entropy Index (Float)
@@ -331,7 +360,7 @@ class Index(object):
     def theil(self, data):
         """Calculate the Theil Index (Generalized Entropy Index for a=1).
 
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :return: Theil Index (Float)
 
@@ -343,7 +372,7 @@ class Index(object):
     def kolm(self, data, alpha):
         """Calculate the Kolm index.
 
-        :param data: Positive data
+        :param data: Positive numerical data
         :type data: numpy array
         :param alpha: Index parameter
         :return: Kolm Index (Float)
@@ -476,3 +505,19 @@ class Index(object):
         # TODO Semantic documentation
         print(index)
         return
+
+    def margalev(self, data):
+        """Calculate the Margalev index.
+
+        :param data: Categorical data
+        :type data: list
+        :return: D (Float)
+
+        `Open Risk Manual Entry for Gini Index <https://www.openriskmanual.org/wiki/Margalef_Index>`_
+        """
+        n = len(data)
+        s = len(list(set(data)))
+        if n == 0:
+            return 0
+        else:
+            return (s - 1) / np.log(n)

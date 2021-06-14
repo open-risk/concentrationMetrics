@@ -13,25 +13,14 @@
 # limitations under the License.
 
 import concentrationMetrics as cm
-import pandas as pd
+import numpy as np
 
-dataset_path = cm.source_path + "/datasets/"
-
-# Comparison with R version in IC2 package on hhbudget dataset
-# Expected Results:
-# Epsilon 0: 0
-# Epsilon 1: 0.3245925
-# Epsilon 2: 0.4951668
-# Epsilon 3: 0.6053387
-# Epsilon 4: 0.6856425
-
-hhbudgets = pd.read_csv(dataset_path + "hhbudgets.csv")
-y = hhbudgets["ingreso"].values
+y = [0, 1, 2, 3]  # this throws a numpy AttributeError
+y = [-1, 1, 2, 3]  # this throws a ValueError (data values must be positive)
+y = [0, 0, 0, 0]  # this throws a ValueError (some data values must be non-zero)
+y = [0, 1, 2, 3, 4]
+y = np.array(y)
 
 myIndex = cm.Index()
-
-# print(cl.atkinson(y, 0))
 print(myIndex.atkinson(y, 1))
-print(myIndex.atkinson(y, 2))
-print(myIndex.atkinson(y, 3))
-print(myIndex.atkinson(y, 4))
+

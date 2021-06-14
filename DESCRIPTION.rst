@@ -56,11 +56,11 @@ File structure
 * `docs/` Sphinx generated documentation
 * `tests/` testing the implementation
 
-All indexes are currently implemented in concentrationMetrics.py as methods of the Index object.
+All indexes are currently implemented in concentrationMetrics/model.py as methods of the Index object.
 
 Dependencies
 ============
-The main dependencies are the standard python datascience stack and networkx. The full list is in requirements.txt
+The main dependencies are the standard python datascience stack (numpy, pandas etc) and networkx. The full list is in requirements.txt
 
 - matplotlib
 - numpy

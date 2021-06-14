@@ -1,10 +1,10 @@
 Roadmap
 ============================
 
-concentrationMetrics aims to become the reference implementation for all widely used concentration and diversity
+concentrationMetrics aims to become the reference python implementation for all widely used concentration and diversity
 indices and metrics. This roadmap lays out the upcoming steps in this journey.
 
-An indicative list of future functionality to be implemented sometime within 2020
+An indicative list of future functionality to be implemented sometime within 2021
 
 v0.6.xx
 ------------------------

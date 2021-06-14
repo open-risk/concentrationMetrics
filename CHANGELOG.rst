@@ -3,11 +3,17 @@ Change Log
 
 PLEASE NOTE THAT THE API IS STILL UNSTABLE AS MORE USE CASES / FEATURES ARE ADDED REGULARLY
 
+v0.5.1 (14-06-2020)
+-------------------
+* Added Hall-Tideman Index
+* Streamlined input value exception handling (value / type errors), issue (https://github.com/open-risk/concentrationMetrics/issues/7)
+
+
 v0.5.0 (05-04-2020)
 -------------------
 * Added script that produces cross-check calculations from corresponding R packages
 * Expanded functionality to process dataframes
-* PiPy installation
+* PyPI installation
 
 v0.4.2 (08-03-2019)
 -------------------

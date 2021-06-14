@@ -132,11 +132,22 @@ class TestConcentrationLib(unittest.TestCase):
         self.assertTrue(abs(myIndex.hk(vector, 1) - 1.0 / n) < ERROR_MARGIN)
         self.assertTrue(abs(myIndex.hk(vector, 3) - 1.0 / n) < ERROR_MARGIN)
 
+    def test_hti(self):
+        """
+        Testing Hall-Tideman Index (compare with Gini)
+
+        """
+        myIndex = cm.Index()
+        n = 100
+        vector = np.random.normal(1000, 1, n)
+        self.assertTrue(abs(1 - 1 / (n * myIndex.hti(vector)) - myIndex.gini(vector)) < ERROR_MARGIN)
+
 
 class TestConfidenceIntervals(unittest.TestCase):
     """ Test confidence interval functionality
 
     """
+
     def shortDescription(self):
         doc = self._testMethodDoc
         return doc
@@ -168,6 +179,7 @@ class TestEllisonGlaeser(unittest.TestCase):
     """ Test Ellison Glaeser index (multi-dimensional)
 
     """
+
     def shortDescription(self):
         doc = self._testMethodDoc
         return doc
