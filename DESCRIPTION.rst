@@ -1,8 +1,7 @@
 The concentrationMetrics Library
 ================================
 
-ConcentrationMetrics is an MIT-licensed `Python <http://www.python.org>`_ package aimed at becoming a reference implementation
-of indexes used in the analysis of concentration, inequality and diversity measures.
+concentrationMetrics is an MIT-licensed `Python <http://www.python.org>`_ package aimed at becoming a reference implementation of indexes used in the analysis of concentration, inequality and diversity measures.
 
 Overview of Main Features
 =========================

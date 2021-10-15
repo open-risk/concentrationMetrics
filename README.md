@@ -20,7 +20,7 @@ Key Information
 * Mathematical Documentation: [Open Risk Manual](<https://www.openriskmanual.org/wiki/Category:Concentration_Index>)
 * Code Documentation: [Read The Docs](https://concentrationmetrics.readthedocs.io/en/latest/index.html)
 * Development website: [Github](https://github.com/open-risk/concentrationMetrics)
-* General Discussions: [Gitter Lobby](https://gitter.im/open-risk/Lobby)
+* General Discussions: [Open Risk Commons](https://www.openriskcommons.org/c/open-source/concentrationmetrics/17)
 * Package Specific Chat: [Gitter Project](https://gitter.im/open-risk/concentrationMetrics)
 
 **NB: concentrationMetrics is still in active development. If you encounter issues please raise them in our github repository**

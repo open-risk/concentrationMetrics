@@ -127,7 +127,7 @@ class Index(object):
             return weights[:n].sum()
 
     def berger_parker(self, data):
-        """Calculate the Berger Parker Index (special version of the Concentration Ratio).
+        """Calculate the Berger-Parker Index (special version of the Concentration Ratio).
 
         :param data: Positive numerical data
         :type data: numpy array
@@ -384,15 +384,15 @@ class Index(object):
             return 0
         else:
             mu = data.mean()
-            weights = self.get_weights(data)
-            n_weights = np.multiply(- n * mu * alpha, weights)
+            weights = self.get_weights(data) - mu
+            n_weights = np.multiply(alpha, weights)
             h = np.exp(n_weights).sum()
-            return mu + (np.log(h) - np.log(n)) / alpha
+            return (np.log(h) - np.log(n)) / alpha
 
     def ellison_glaeser(self, data, na, ni):
         """Ellison and Glaeser (1997) indexes of industrial concentration.
 
-        .. note:: Implemented as in equation (5) of original reference
+        .. note:: Implemented as in equation (5) of the original reference
 
         .. note:: Input data are a data frame of three columns of the following type:
 
@@ -438,6 +438,7 @@ class Index(object):
         total = 0
         eg_indexes = []
         s = np.zeros((ni, na))
+
         for industry_index, group in industry_groups:
             # compute industry totals
             # x = group['Exposure'].as_matrix()
@@ -473,7 +474,7 @@ class Index(object):
         return eg_indexes
 
     def compute(self, data, *args, ci=None, samples=None, index='hhi'):
-        """Compute bootstraped confidence interval estimates.
+        """Compute bootstrapped confidence interval estimates.
 
         :param data:
         :param args:
@@ -521,3 +522,59 @@ class Index(object):
             return 0
         else:
             return (s - 1) / np.log(n)
+
+    def tango(self, data):
+        """Calculate the Tango temporal clustering index.
+
+        :param data: Categorical data
+        :type data: list
+        :return: D (Float)
+
+        `Open Risk Manual Entry for Tango Clustering Index <https://www.openriskmanual.org/wiki/Tango_Index>`_
+        """
+        pass
+
+    def graph_density(self, adjacency_matrix):
+        """Calculate the Graph Density of an Adjacency Matrix.
+
+        :param adjacency_matrix:
+        :type adjacency_matrix: matrix
+        :return: D (Float)
+
+        `Open Risk Manual Entry for Graph Density <https://www.openriskmanual.org/wiki/Graph_Density>`_
+        """
+        pass
+
+    def network_entropy(self, adjacency_matrix):
+        """Calculate the Network Entropy of an Adjacency Matrix.
+
+        :param adjacency_matrix:
+        :type adjacency_matrix: matrix
+        :return: D (Float)
+
+        `Open Risk Manual Entry for Network Entropy <https://www.openriskmanual.org/wiki/Network_Entropy>`_
+        """
+        pass
+
+    def global_clustering(self, adjacency_matrix):
+        """Calculate the Global Clustering Coefficient of an Adjacency Matrix.
+
+        :param adjacency_matrix:
+        :type adjacency_matrix: matrix
+        :return: D (Float)
+
+        `Open Risk Manual Entry for Global Clustering <https://www.openriskmanual.org/wiki/Global_Clustering>`_
+        """
+        pass
+
+
+    def average_clustering(self, adjacency_matrix):
+        """Calculate the Average Clustering Coefficient of an Adjacency Matrix.
+
+        :param adjacency_matrix:
+        :type adjacency_matrix: matrix
+        :return: D (Float)
+
+        `Open Risk Manual Entry for Average Clustering <https://www.openriskmanual.org/wiki/Average_Clustering>`_
+        """
+        pass
