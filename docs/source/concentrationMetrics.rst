@@ -1,4 +1,4 @@
-concentrationMetrics module
+concentrationMetrics Package
 =============================
 
 .. automodule:: concentrationMetrics.model

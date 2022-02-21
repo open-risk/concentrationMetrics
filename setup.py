@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017-2021 Open Risk (https://www.openriskmanagement.com)
+# (c) 2017-2022 Open Risk (https://www.openriskmanagement.com)
 #
 # concentrationMetrics is licensed under the Apache 2.0 license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -16,20 +16,25 @@
 from codecs import open
 from setuptools import setup
 
-__version__ = '0.5.1'
+__version__ = '0.6.0'
 
 ver = __version__
+
+long_descr = open('docs/source/description.rst', 'r', encoding='utf8').read()
 
 setup(
     name='concentrationMetrics',
     version=ver,
+    description='A python library for the computation of various concentration, inequality and diversity indices',
+    long_description=long_descr,
+    long_description_content_type='text/x-rst',
+    author='Open Risk',
+    author_email='info@openrisk.eu',
     packages=['concentrationMetrics', 'datasets', 'examples.python'],
+    include_package_data=True,
     url='https://github.com/open-risk/concentrationMetrics',
     download_url='https://github.com/open-risk/concentrationMetrics/archive/v_0.5.0.tar.gz',
     license='The MIT License (MIT)',
-    author='Open Risk',
-    author_email='info@openrisk.eu',
-    description='A python library for the computation of various concentration, inequality and diversity indices',
     install_requires=[
         'numpy',
         'pandas',
@@ -37,7 +42,6 @@ setup(
         'networkx',
         'pytest'
     ],
-    include_package_data=True,
     zip_safe=False,
     provides=['concentrationMetrics'],
     keywords=['concentration', 'diversity', 'inequality', 'index'],

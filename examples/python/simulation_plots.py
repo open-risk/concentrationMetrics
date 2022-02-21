@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2016-2021 Open Risk, all rights reserved
+# (c) 2016-2022 Open Risk, all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -14,7 +14,6 @@
 
 # -*- coding: utf-8 -*-
 """
-Created on Fri Feb 29 14:33:17 2015
 @author: Open Risk
 Purpose: Demonstrate usage of the ConcentrationMetrics
 """
@@ -34,7 +33,7 @@ if __name__ == "__main__":
     a = 1.7  # zipf parameter
     x = []
     y = []
-    for iter in range(0, 10000):  # portfolio simulations
+    for iteration in range(0, 10000):  # portfolio simulations
         # Generate a portfolio of 100 entities
         portfolio = np.random.zipf(a, 100)
         portfolio = np.array(sorted(portfolio, reverse=True))

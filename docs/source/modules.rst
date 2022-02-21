@@ -1,8 +1,11 @@
 API
 ============================
 
+The concentrationMetrics package structure and API.
+
+.. warning:: The library is still being expanded / refactored. Significant structure and API changes are likely.
+
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
 
    concentrationMetrics
-

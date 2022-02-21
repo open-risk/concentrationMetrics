@@ -3,6 +3,12 @@ Change Log
 
 PLEASE NOTE THAT THE API IS STILL UNSTABLE AS MORE USE CASES / FEATURES ARE ADDED REGULARLY
 
+v0.6.0 (21-02-2022)
+-------------------
+* Installation:
+    * PyPI release update
+
+
 v0.5.1 (14-06-2020)
 -------------------
 * Added Hall-Tideman Index
@@ -13,7 +19,7 @@ v0.5.0 (05-04-2020)
 -------------------
 * Added script that produces cross-check calculations from corresponding R packages
 * Expanded functionality to process dataframes
-* PyPI installation
+* First PyPI installation
 
 v0.4.2 (08-03-2019)
 -------------------

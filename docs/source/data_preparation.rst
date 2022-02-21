@@ -11,9 +11,7 @@ The data need not be normalized, this is done automatically with the :meth:`conc
 
 Tabular Data and Dataframes
 ---------------------------
-For convenience, when the data are in tabular or dataframe format (e.g. observation counts for different types
-of entities) the library offers built-in functionality to calculate metrics across the data set. So for example if we
-have the distribution of counts per Attribute (rows) for three distinct categories (Columns Group 1 to 3) the calculation will produce the desired index for each one of the Groups
+For convenience, when the data are in tabular or dataframe format (e.g. observation counts for different types of entities) the library offers built-in functionality to calculate metrics across the data set. So for example if we have the distribution of counts per Attribute (rows) for three distinct categories (Columns Group 1 to 3) the calculation will produce the desired index for each one of the Groups
 
 
 +-----------+------------+------------+

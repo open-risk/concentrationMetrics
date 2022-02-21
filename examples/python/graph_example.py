@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2016-2021 Open Risk, all rights reserved
+# (c) 2016-2022 Open Risk, all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -12,11 +12,11 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
-import concentrationMetrics as cm
-import pandas as pd
-import networkx as nx
 import matplotlib.pyplot as plt
+import networkx as nx
 import numpy as np
+
+import concentrationMetrics as cm
 
 # Create a directed star graph
 n = 101

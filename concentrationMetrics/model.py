@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017-2021 Open Risk (www.openriskmanagement.com), all rights reserved
+# (c) 2017-2022 Open Risk (www.openriskmanagement.com), all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -144,9 +144,11 @@ class Index(object):
         :type normalized: bool
         :param data: Positive numerical data
         :type data: numpy array
+        :param ci: confidence interval
+        :type ci: float
         :return: HHI (Float)
 
-        `Open Risk Manual Entry for Hirschman-Herfindahl Index <https://www.openriskmanual.org/wiki/Herfindahl-Hirschman_Index>`_
+        `Open Risk Manual Entry for the Hirschman-Herfindahl Index <https://www.openriskmanual.org/wiki/Herfindahl-Hirschman_Index>`_
         """
         # Normalize the data
         weights = self.get_weights(data)
@@ -236,7 +238,7 @@ class Index(object):
         :type data: numpy array
         :return: HTI (Float)
 
-        `Open Risk Manual Entry for Gini Index <https://www.openriskmanual.org/wiki/Hall-Tideman_Index>`_
+        `Open Risk Manual Entry for Hall-Tideman Index <https://www.openriskmanual.org/wiki/Hall-Tideman_Index>`_
         """
         data = np.array(sorted(data, reverse=True))
         weights = self.get_weights(data)
@@ -514,7 +516,7 @@ class Index(object):
         :type data: list
         :return: D (Float)
 
-        `Open Risk Manual Entry for Gini Index <https://www.openriskmanual.org/wiki/Margalef_Index>`_
+        `Open Risk Manual Entry for Margalev Index <https://www.openriskmanual.org/wiki/Margalef_Index>`_
         """
         n = len(data)
         s = len(list(set(data)))
@@ -566,7 +568,6 @@ class Index(object):
         `Open Risk Manual Entry for Global Clustering <https://www.openriskmanual.org/wiki/Global_Clustering>`_
         """
         pass
-
 
     def average_clustering(self, adjacency_matrix):
         """Calculate the Average Clustering Coefficient of an Adjacency Matrix.

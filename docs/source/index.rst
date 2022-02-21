@@ -1,21 +1,25 @@
-.. concentrationMetrics documentation master file, created by
-   sphinx-quickstart on Wed May  9 12:53:19 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. concentrationMetrics documentation master file
 
-Welcome to concentrationMetrics's documentation!
-=================================================
+concentrationMetrics Documentation
+==================================
+
+.. image:: ../../examples/hhi_vs_gini.png
+
+concentrationMetrics is an MIT-licensed python package aimed at becoming a reference implementation of indexes used in the analysis of concentration, inequality and diversity measures.
+
+**NB: concentrationMetrics is still in alpha release / active development. If you encounter issues please raise them in our github repository**
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    description
    data_preparation
+   examples
    modules
-   changelog
-   todo
+   testing
    roadmap
+   changelog
 
 
 Indexes and tables
