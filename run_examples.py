@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017-2022 Open Risk, all rights reserved
+# (c) 2017-2023 Open Risk, all rights reserved
 #
 # concentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -19,7 +19,8 @@
 from concentrationMetrics import source_path
 
 examples_path = source_path + "examples/python/"
-filelist = ['atkinson_example', 'BCI_example', 'confidence_interval_example', 'ellison_glaeser_example', 'gini_example', 'interface_examples', 'semantic_documentation', 'simulation_plots']
+filelist = ['atkinson_example', 'BCI_example', 'confidence_interval_example', 'ellison_glaeser_example', 'gini_example',
+            'interface_examples', 'semantic_documentation', 'simulation_plots']
 
 if __name__ == '__main__':
 

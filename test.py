@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017-2022 Open Risk, all rights reserved
+# (c) 2017-2023 Open Risk, all rights reserved
 #
 # concentrationMetrics is licensed under the Apache 2.0 license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -17,9 +17,11 @@ run the concentrationMetrics unittest suite
 
 """
 
-import unittest
 import sys
+import unittest
+
 from concentrationMetrics import source_path
+
 sys.path.append(source_path)
 
 loader = unittest.TestLoader()

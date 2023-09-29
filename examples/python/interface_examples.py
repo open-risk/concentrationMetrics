@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2016-2022 Open Risk, all rights reserved
+# (c) 2016-2023 Open Risk, all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of

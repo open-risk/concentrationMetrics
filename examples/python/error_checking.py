@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2016-2022 Open Risk, all rights reserved
+# (c) 2016-2023 Open Risk, all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -12,8 +12,9 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
-import concentrationMetrics as cm
 import numpy as np
+
+import concentrationMetrics as cm
 
 y = [0, 1, 2, 3]  # this throws a numpy AttributeError
 # y = [-1, 1, 2, 3]  # this throws a ValueError (data values must be positive)
@@ -23,4 +24,3 @@ y = np.array(y)
 
 myIndex = cm.Index()
 print(myIndex.atkinson(y, 1))
-

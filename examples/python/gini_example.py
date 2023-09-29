@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2016-2022 Open Risk, all rights reserved
+# (c) 2016-2023 Open Risk, all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -12,12 +12,12 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
-import concentrationMetrics as cm
 import numpy as np
+
+import concentrationMetrics as cm
 
 myIndex = cm.Index()
 x = np.array([541, 1463, 2445, 3438, 4437, 5401, 6392, 8304, 11904, 22261])
-
 
 # Comparison with R version in ineq package
 # Results

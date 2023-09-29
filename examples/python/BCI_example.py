@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2020 Open Risk, all rights reserved
+# (c) 2020 - 2023 Open Risk, all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -12,8 +12,9 @@
 # either express or implied. See the License for the specific language governing permissions and
 # limitations under the License.
 
-import concentrationMetrics as cm
 import pandas as pd
+
+import concentrationMetrics as cm
 
 dataset_path = cm.source_path + "/datasets/"
 
@@ -49,7 +50,6 @@ dataset_path = cm.source_path + "/datasets/"
 
 """
 
-
 BCI = pd.read_json(dataset_path + "BCI.json")
 y = BCI.values
 
@@ -69,4 +69,3 @@ for i in range(6):
     print('HHI')
     print('----------')
     print(i, mySingleIndex.hhi(y[i, :]))
-
