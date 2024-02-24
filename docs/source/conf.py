@@ -19,10 +19,10 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 # -- Project information -----------------------------------------------------
 
-__version__ = '0.5.0'
+__version__ = '0.6.0'
 
 project = 'concentrationMetrics'
-copyright = '2017-2022, Open Risk'
+copyright = '2017-2024, Open Risk'
 author = 'Open Risk'
 
 # The short X.Y version
@@ -68,7 +68,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
