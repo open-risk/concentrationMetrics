@@ -6,3 +6,4 @@ Pygments
 scipy
 Sphinx
 pytest
+sphinx_rtd_theme
