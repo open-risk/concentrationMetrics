@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017-2023 Open Risk, all rights reserved
+# (c) 2017--2024 Open Risk (https://www.openriskmanagement.com), all rights reserved
 #
 # concentrationMetrics is licensed under the Apache 2.0 license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -13,7 +13,7 @@
 # limitations under the License.
 
 """
-run the concentrationMetrics unittest suite
+Run the concentrationMetrics unittest suite
 
 """
 

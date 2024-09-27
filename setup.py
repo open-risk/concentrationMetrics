@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017-2023 Open Risk (https://www.openriskmanagement.com)
+# (c) 2017-2024 Open Risk (https://www.openriskmanagement.com)
 #
 # concentrationMetrics is licensed under the Apache 2.0 license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -26,7 +26,7 @@ long_descr = open('docs/source/description.rst', 'r', encoding='utf8').read()
 setup(
     name='concentrationMetrics',
     version=ver,
-    description='A python library for the computation of various concentration, inequality and diversity indices',
+    description='A Python library for the computation of various concentration, inequality and diversity indices',
     long_description=long_descr,
     long_description_content_type='text/x-rst',
     author='Open Risk',
