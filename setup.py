@@ -30,7 +30,7 @@ setup(
     long_description=long_descr,
     long_description_content_type='text/x-rst',
     author='Open Risk',
-    author_email='info@openrisk.eu',
+    author_email='info@openriskmanagement.com',
     packages=['concentrationMetrics', 'datasets', 'examples.python'],
     include_package_data=True,
     url='https://github.com/open-risk/concentrationMetrics',
