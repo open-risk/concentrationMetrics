@@ -7,7 +7,7 @@
 Intro
 ==========================
 
-concentrationMetrics is a python library for the computation of various concentration, diversification and inequality indices. The library implements the computation of all well known indexes of inequality and concentration. 
+concentrationMetrics is a python library for the computation of various concentration, diversification and inequality indices. The library aims to implement the computation of all well known indexes of inequality and concentration along with confidence intervals. 
 
 You can use concentrationMetrics to:
 
@@ -52,7 +52,6 @@ The below list provides more specific documentation URL's for each one of the im
 Support and Training
 =========================
 The Open Risk Academy has free courses demonstrating the use of the library: [Open Risk Academy](https://www.openriskacademy.com)
-
 
 Examples
 ========
