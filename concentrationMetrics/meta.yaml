@@ -1,0 +1,45 @@
+{% set name = "concentrationMetrics" %}
+{% set version = "0.6.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/open-risk/concentrationMetrics/archive/refs/tags/v0.6.0-alpha.tar.gz
+  sha256: 7fc5d862477cc27edb4891912049f9f92b92abc3292f0a9d64d852f9942e68d1
+
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - numpy
+    - pandas
+    - scipy
+    - networkx
+    - pytest
+
+test:
+  imports:
+    - concentrationMetrics
+    - datasets
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/open-risk/concentrationMetrics
+  license: MIT
+  license_file: LICENSE.txt
+
+extra:
+  recipe-maintainers:
+    - open-risk

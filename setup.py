@@ -34,7 +34,7 @@ setup(
     packages=['concentrationMetrics', 'datasets', 'examples.python'],
     include_package_data=True,
     url='https://github.com/open-risk/concentrationMetrics',
-    download_url='https://github.com/open-risk/concentrationMetrics/archive/v_0.6.0.tar.gz',
+    download_url='https://github.com/open-risk/concentrationMetrics/archive/refs/tags/v0.6.0-alpha.tar.gz',
     license='The MIT License (MIT)',
     install_requires=[
         'numpy',
