@@ -8,12 +8,10 @@ v0.6.0 (21-02-2022)
 * Installation:
     * PyPI release update
 
-
 v0.5.1 (14-06-2020)
 -------------------
 * Added Hall-Tideman Index
 * Streamlined input value exception handling (value / type errors), issue (https://github.com/open-risk/concentrationMetrics/issues/7)
-
 
 v0.5.0 (05-04-2020)
 -------------------

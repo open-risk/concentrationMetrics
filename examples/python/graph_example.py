@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2016--2024 Open Risk (https://www.openriskmanagement.com), all rights reserved
+# (c) 2016--2025 Open Risk (https://www.openriskmanagement.com), all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -51,5 +51,6 @@ nx.write_yaml(G, dataset_path + "star.yml")
 
 # Load a graph
 G1 = nx.read_yaml(dataset_path + "star.yml")
+# G1 = nx.read_yaml(dataset_path + "star2.yml")
 nx.draw(G1)
 plt.show()

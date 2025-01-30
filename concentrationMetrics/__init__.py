@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017-2024 Open Risk (www.openriskmanagement.com), all rights reserved
+# (c) 2017--2025 Open Risk (www.openriskmanagement.com), all rights reserved
 #
 # ConcentrationMetrics is licensed under the MIT license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -18,7 +18,7 @@ analysis of concentration, inequality and diversity measures. """
 
 from .model import *
 
-__version__ = '0.5.0'
+__version__ = '0.6.0'
 
 package_name = 'concentrationMetrics'
 module_path = os.path.dirname(__file__)
