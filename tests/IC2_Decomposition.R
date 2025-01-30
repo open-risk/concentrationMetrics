@@ -14,11 +14,8 @@
 
 # Script to test concentrationMetrics against R packages
 # Package IC2
-# Package ineq
-# Package vegan
-# Package EcoIndR
 
-# IC2 Package No Longer available on CRAN
+# ATTN: IC2 Package No Longer available on CRAN
 
 library(IC2)
 data(hhbudgets)
@@ -33,11 +30,3 @@ summary(hhbudgets[,"tenencia"]) #35 NA's
 decompGEI(x=hhbudgets[,"transporte"], z=hhbudgets[,"tenencia"], w=hhbudgets[,"factor"], ELMO=FALSE)
 summary(decompGEI(x=hhbudgets[,"transporte"], z=hhbudgets[,"tenencia"], w=hhbudgets[,"factor"], alpha=1.5))
 
-library(vegan)
-data(BCI)
-H <- diversity(BCI)
-simp <- diversity(BCI, "simpson")
-invsimp <- diversity(BCI, "inv")
-shannon <- diversity(BCI, "shannon")
-
-knitr::kable(head(shannon))

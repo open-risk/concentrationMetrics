@@ -11,10 +11,10 @@ concentrationMetrics is a python library for the computation of various concentr
 
 You can use concentrationMetrics to:
 
-- access an exhaustive collection of concentration, inequality and diversity indexes and metrics
-- perform file input/output in both json and csv formats
-- compute indexes with confidence intervals via bootstraping
-- visualize using matplotlib
+- Access an exhaustive collection of concentration, inequality and diversity indexes and metrics
+- Perform file input/output in both json and csv formats
+- Compute indexes with confidence intervals via bootstraping
+- Visualize using matplotlib
 
 Key Information
 ================
@@ -27,8 +27,6 @@ Key Information
 * Discussions: [Open Risk Commons](https://www.openriskcommons.org/c/open-source/concentrationmetrics/17)
 
 **NB: concentrationMetrics is still in active development. If you encounter issues please raise them in our GitHub repository**
-
-[Full Description](DESCRIPTION.rst)
 
 List of Implemented Indexes
 ===============================

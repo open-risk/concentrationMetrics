@@ -58,7 +58,7 @@ Implementation / Functionality
 
 Documentation
 -------------
-- Add notebook examples
+- Add Jupyter Notebook examples
 
 Credit Risk Specific Functionality
 ----------------------------------

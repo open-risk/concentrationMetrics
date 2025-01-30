@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-# (c) 2017-2024 Open Risk (https://www.openriskmanagement.com)
+# (c) 2017-2025 Open Risk (https://www.openriskmanagement.com)
 #
 # concentrationMetrics is licensed under the Apache 2.0 license a copy of which is included
 # in the source distribution of concentrationMetrics. This is notwithstanding any licenses of
@@ -34,7 +34,7 @@ setup(
     packages=['concentrationMetrics', 'datasets', 'examples.python'],
     include_package_data=True,
     url='https://github.com/open-risk/concentrationMetrics',
-    download_url='https://github.com/open-risk/concentrationMetrics/archive/v_0.5.0.tar.gz',
+    download_url='https://github.com/open-risk/concentrationMetrics/archive/v_0.6.0.tar.gz',
     license='The MIT License (MIT)',
     install_requires=[
         'numpy',
@@ -54,7 +54,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3 :: Only',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.10',
         'Topic :: Scientific/Engineering',
         'Topic :: Scientific/Engineering :: Information Analysis'
     ]

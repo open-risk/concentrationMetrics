@@ -6,11 +6,11 @@ concentrationMetrics is an MIT-licensed `Python <http://www.python.org>`_ packag
 Overview of Main Features
 =========================
 
-* exhaustive collection of concentration and inequality indexes and metrics
-* supports file input/output in both json and csv formats
-* detailed mathematical documentation
-* computation of confidence intervals via bootstraping
-* visualization using matplotlib
+* Exhaustive collection of concentration and inequality indexes and metrics
+* Supports file input/output in both json and csv formats
+* Detailed mathematical documentation
+* Computation of confidence intervals via bootstraping
+* Visualization using matplotlib
 
 
 Usage
