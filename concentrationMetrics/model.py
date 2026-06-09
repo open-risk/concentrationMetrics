@@ -294,6 +294,44 @@ class Index(object):
             else:
                 return h
 
+    def renyi(self, data, alpha):
+        """Calculate the Rényi Entropy of order alpha.
+
+        :param data: Positive numerical data
+        :type data: numpy array
+        :param alpha: Entropy order (alpha >= 0)
+        :type alpha: float
+        :return: Rényi Entropy (Float)
+
+        .. note:: At alpha=1 the Rényi entropy equals the Shannon entropy (limit evaluated explicitly).
+        .. note:: At alpha=2, H_2 = -log(HHI_unnormalized).
+
+        Formula: H_alpha = (1 / (1 - alpha)) * log(sum(p_i ^ alpha))
+
+        Reference: Rényi, A. (1961), "On measures of entropy and information",
+        *Proceedings of the 4th Berkeley Symposium on Mathematics, Statistics and Probability*,
+        Vol. 1, pp. 547--561.
+
+        `Open Risk Manual Entry for Rényi Entropy <https://www.openriskmanual.org/wiki/Renyi_Entropy>`_
+        """
+        weights = self.get_weights(data)
+        weights_nz = weights[weights != 0]
+        n = weights_nz.size
+        if n == 0:
+            return 0
+        else:
+            if alpha < 0:
+                raise ValueError('Alpha must be non-negative')
+            elif alpha == 0:
+                return np.log(float(n))
+            elif alpha == 1:
+                # limit as alpha -> 1 equals the Shannon entropy: -sum(p_i * log(p_i))
+                log_weights = np.log(weights_nz)
+                return -np.multiply(weights_nz, log_weights).sum()
+            else:
+                h = np.power(weights_nz, alpha).sum()
+                return np.log(h) / (1.0 - alpha)
+
     def atkinson(self, data, epsilon):
         """Calculate the Atkinson inequality index.
 

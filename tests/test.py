@@ -142,6 +142,28 @@ class TestConcentrationLib(unittest.TestCase):
         vector = np.random.normal(1000, 1, n)
         self.assertTrue(abs(1 - 1 / (n * myIndex.hti(vector)) - myIndex.gini(vector)) < ERROR_MARGIN)
 
+    def test_renyi(self):
+        """
+        Testing Rényi Entropy
+
+        For any uniform distribution of n elements, H_alpha = log(n) for all alpha >= 0.
+        At alpha=2, H_2 = -log(HHI_unnormalized) (verified independently).
+        Non-uniform check at alpha=2: data=[1,2,1], weights=[0.25,0.5,0.25],
+        H_2 = -log(0.25^2 + 0.5^2 + 0.25^2) = -log(0.375) ~ 0.9808292530.
+        """
+        myIndex = cm.Index()
+        n = 4
+        vector = np.ones(n)
+        # uniform distribution: H_alpha = log(n) for all alpha
+        self.assertTrue(abs(myIndex.renyi(vector, 0) - np.log(n)) < ERROR_MARGIN)
+        self.assertTrue(abs(myIndex.renyi(vector, 1) - np.log(n)) < ERROR_MARGIN)
+        self.assertTrue(abs(myIndex.renyi(vector, 2) - np.log(n)) < ERROR_MARGIN)
+        # at alpha=2: H_2 = -log(HHI_unnormalized)
+        self.assertTrue(abs(myIndex.renyi(vector, 2) + np.log(myIndex.hhi(vector, normalized=False))) < ERROR_MARGIN)
+        # non-uniform: data=[1,2,1], alpha=2, hand-computed H_2 = -log(0.375)
+        vector2 = np.array([1.0, 2.0, 1.0])
+        self.assertTrue(abs(myIndex.renyi(vector2, 2) - (-np.log(0.375))) < ERROR_MARGIN)
+
 
 class TestConfidenceIntervals(unittest.TestCase):
     """ Test confidence interval functionality
@@ -162,7 +184,7 @@ class TestConfidenceIntervals(unittest.TestCase):
 
         methods = [['cr', 5], ['berger_parker'], ['hhi'], ['hk', 3],
                    ['hoover'], ['gini'], ['shannon'], ['atkinson', 1.5], ['gei', 3],
-                   ['theil'], ['kolm', 2]]
+                   ['theil'], ['kolm', 2], ['renyi', 2]]
 
         print(self.shortDescription())
         for method in methods:
