@@ -238,7 +238,7 @@ class TestEllisonGlaeser(unittest.TestCase):
         # uniform exposure
         exposure = np.ones(N)
         # single industry
-        industry = np.zeros(N, dtype=np.int)
+        industry = np.zeros(N, dtype=int)
         # uniform area distribution
         area = np.arange(0, N)
         # create dataframe

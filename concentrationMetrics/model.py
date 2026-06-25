@@ -500,7 +500,7 @@ class Index(object):
         #
         # Group by industry
         #
-        industry_groups = data.groupby(['Industry'])
+        industry_groups = data.groupby('Industry')
         hhi_i = []
         industry_totals = []
         total = 0
