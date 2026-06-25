@@ -249,6 +249,34 @@ class Index(object):
             i = np.arange(1, n + 1)
             return 1.0 / (2.0 * np.multiply(i, weights).sum() - 1.0)
 
+    def cci(self, data):
+        """Calculate the Comprehensive Concentration (Horvath) Index.
+
+        :param data: Positive numerical data
+        :type data: numpy array
+        :return: CCI (Float)
+
+        Formula: CCI = s_1 + sum_{i=2}^{n} s_i^2 * (2 - s_i), where s_1 >= s_2 >= ... >= s_n
+        are the shares sorted in decreasing order. The largest share enters linearly while
+        every other share enters through a squared term up-weighted by (2 - s_i).
+
+        .. note:: For a monopoly (single unit) CCI = 1; it tends to 0 as n grows under uniformity.
+
+        Reference: Horvath, J. (1970), "Suggestion for a Comprehensive Measure of Concentration",
+        *Southern Economic Journal*, Vol. 36, No. 4, pp. 446--452.
+
+        `Open Risk Manual Entry for Comprehensive Concentration Index <https://www.openriskmanual.org/wiki/Comprehensive_Concentration_Index>`_
+        """
+        data = np.array(sorted(data, reverse=True))
+        weights = self.get_weights(data)
+        n = weights.size
+        if n == 0:
+            return 0
+        else:
+            s1 = weights[0]
+            rest = weights[1:]
+            return s1 + np.multiply(np.square(rest), 2.0 - rest).sum()
+
     def gini(self, data):
         """Calculate the Gini index.
 

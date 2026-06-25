@@ -36,6 +36,7 @@ The below list provides more specific documentation URL's for each one of the im
 
 * [Atkinson Index](https://www.openriskmanual.org/wiki/Atkinson_Index)
 * [Berger-Parker Index](https://www.openriskmanual.org/wiki/Berger-Parker_Index)
+* [Comprehensive Concentration Index (Horvath)](https://www.openriskmanual.org/wiki/Comprehensive_Concentration_Index)
 * [Concentration Ratio](https://www.openriskmanual.org/wiki/Concentration_Ratio)
 * [Ellison-Glaeser Index](https://www.openriskmanual.org/wiki/Ellison-Glaeser_Index)
 * [Gini Index](https://www.openriskmanual.org/wiki/Gini_Index)

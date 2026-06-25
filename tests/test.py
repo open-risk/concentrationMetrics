@@ -164,6 +164,23 @@ class TestConcentrationLib(unittest.TestCase):
         vector2 = np.array([1.0, 2.0, 1.0])
         self.assertTrue(abs(myIndex.renyi(vector2, 2) - (-np.log(0.375))) < ERROR_MARGIN)
 
+    def test_cci(self):
+        """
+        Testing Comprehensive Concentration (Horvath) Index
+
+        CCI = s_1 + sum_{i>=2} s_i^2 (2 - s_i), shares sorted descending.
+        Monopoly: single unit -> CCI = 1.
+        Uniform n=4: 1/4 + 3*(1/16)*(2 - 1/4) = 0.578125.
+        Non-uniform [1,2,1] -> shares [0.5,0.25,0.25] -> 0.5 + 2*(0.0625*1.75) = 0.71875.
+        """
+        myIndex = cm.Index()
+        # monopoly edge case: single unit -> CCI = 1
+        self.assertTrue(abs(myIndex.cci(np.array([5.0])) - 1.0) < ERROR_MARGIN)
+        # uniform n=4 edge case
+        self.assertTrue(abs(myIndex.cci(np.ones(4)) - 0.578125) < ERROR_MARGIN)
+        # hand-computed non-uniform value
+        self.assertTrue(abs(myIndex.cci(np.array([1.0, 2.0, 1.0])) - 0.71875) < ERROR_MARGIN)
+
 
 class TestConfidenceIntervals(unittest.TestCase):
     """ Test confidence interval functionality
@@ -184,7 +201,7 @@ class TestConfidenceIntervals(unittest.TestCase):
 
         methods = [['cr', 5], ['berger_parker'], ['hhi'], ['hk', 3],
                    ['hoover'], ['gini'], ['shannon'], ['atkinson', 1.5], ['gei', 3],
-                   ['theil'], ['kolm', 2], ['renyi', 2]]
+                   ['theil'], ['kolm', 2], ['renyi', 2], ['cci']]
 
         print(self.shortDescription())
         for method in methods:
