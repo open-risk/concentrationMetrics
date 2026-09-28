@@ -50,10 +50,12 @@ The below list provides more specific documentation URL's for each one of the im
 
 Support and Training
 =========================
+
 The Open Risk Academy has free courses demonstrating the use of the library: [Open Risk Academy](https://www.openriskacademy.com)
 
 Examples
 ========
+
 Comparing two indexes across a range of input portfolio data 
 
 ![image](examples/hhi_vs_gini.png)
